@@ -114,6 +114,20 @@ async def _(event):
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
 
+ownerhson_id = 1759470911
+@sython1.on(events.NewMessage(outgoing=False, pattern='/start'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+        order = await event.reply('مرحبا ايها المطور')
+        
+@sython1.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
+async def update(event):
+    await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
+    await sython1.disconnect()
+    await sython1.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
+
+
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
     await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")

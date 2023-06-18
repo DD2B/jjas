@@ -89,7 +89,7 @@ logging.basicConfig(
 LOGS = logging.getLogger(__name__)
 
 
-@sython.on(events.NewMessage(outgoing=True, pattern=r"\.تحديث"))
+@sython1.on(events.NewMessage(outgoing=True, pattern=r"\.تحديث"))
 async def _(event):
 
     sandy = await event.edit(

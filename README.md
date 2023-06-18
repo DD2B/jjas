@@ -1,4 +1,3 @@
+### hi: [jalithon](https://t.me/jalithon) ###
 
-### تابع : [SYTHON](https://t.me/SAYTHONH) ###
-
-![SYTHON](https://te.legra.ph/file/80ff0951e619289e99c79.jpg)
+![jalithon](https://graph.org/file/88c6f26e47314d11fb0d9.jpg)

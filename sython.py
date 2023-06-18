@@ -102,15 +102,16 @@ async def _(event):
 @sython1.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
 async def _(event):
     start = datetime.datetime.now()
-    await event.edit("**جاري الفحص..**")
+    await event.edit("waiting...")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(f'''
-※ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 -  𝗦𝗔𝗬𝗧𝗛𝗢𝗡𝗛    ※
-
-※ 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 - 𝟭.𝟬 - 𝗥𝗘𝗩𝗜𝗦𝗘𝗗   ※
-
-※ 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 - 𝗛𝗨𝗦𝗔𝗠.𝗙𝗔  ※
+**سورس جليثون يعمل بنجاح✅.**
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+- **قاعدة البيانات** : `تعمل بنجاح` 
+ - **إصدار جليثون** :`1.5.0`
+╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point1'))
@@ -154,7 +155,7 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await sython1.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await sython1.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point2'))
 async def _(event):

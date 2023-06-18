@@ -117,7 +117,7 @@ async def _(event):
 async def _(event):
     await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_username)
     await sython1.send_message(bot_username, '/start')
     await asyncio.sleep(4)
@@ -160,7 +160,7 @@ async def _(event):
 async def _(event):
     await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_usernamee)
     await sython1.send_message(bot_usernamee, '/start')
     await asyncio.sleep(4)
@@ -204,7 +204,7 @@ async def _(event):
 async def _(event):
     await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_usernameee)
     await sython1.send_message(bot_usernameee, '/start')
     await asyncio.sleep(4)
@@ -248,7 +248,7 @@ async def _(event):
 async def _(event):
     await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_usernameeee)
     await sython1.send_message(bot_usernameeee, '/start')
     await asyncio.sleep(4)
@@ -291,7 +291,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_username)
     await sython1.send_message(bot_username, '/start')
     await asyncio.sleep(4)
@@ -336,7 +336,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_usernamee)
     await sython1.send_message(bot_usernamee, '/start')
     await asyncio.sleep(4)
@@ -379,7 +379,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_usernameee)
     await sython1.send_message(bot_usernameee, '/start')
     await asyncio.sleep(4)
@@ -423,7 +423,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('saythonh'))
+    joinu = await sython1(JoinChannelRequest('jalithon'))
     channel_entity = await sython1.get_entity(bot_usernameeee)
     await sython1.send_message(bot_usernameeee, '/start')
     await asyncio.sleep(4)

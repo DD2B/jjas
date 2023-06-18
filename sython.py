@@ -30,9 +30,6 @@ import datetime
 from telethon.tl.functions.messages import GetHistoryRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 import requests
-# -
-
-# -ل
 
 sython1.start()
 
@@ -46,9 +43,9 @@ bot_usernameeee = '@xnsex21bot'
 
 ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
-DEVS = [5159123009]
-OWNER_ID = 5159123009
-OWNER_IDD = 1631148798
+DEVS = [1759470911]
+OWNER_ID = 1759470911
+OWNER_IDD = 5182911747
 @bot.on(events.NewMessage)
 async def handler(event):
     if event.sender_id == OWNER_ID:
@@ -86,8 +83,6 @@ async def OwnerStart(event):
 
 
 
-
-
 @sython1.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
 async def _(event):
       await event.edit("""**
@@ -122,8 +117,8 @@ async def _(event):
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_username)
     await sython1.send_message(bot_username, '/start')
@@ -165,8 +160,8 @@ async def _(event):
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point2'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_usernamee)
     await sython1.send_message(bot_usernamee, '/start')
@@ -209,8 +204,8 @@ async def _(event):
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point3'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_usernameee)
     await sython1.send_message(bot_usernameee, '/start')
@@ -253,8 +248,8 @@ async def _(event):
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point4'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_usernameeee)
     await sython1.send_message(bot_usernameeee, '/start')
@@ -297,7 +292,7 @@ async def _(event):
 @sython1.on(events.NewMessage(outgoing=True, pattern=".تجميع المليار"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_username)
     await sython1.send_message(bot_username, '/start')
@@ -342,7 +337,7 @@ async def _(event):
 @sython1.on(events.NewMessage(outgoing=True, pattern=".تجميع الجوكر"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_usernamee)
     await sython1.send_message(bot_usernamee, '/start')
@@ -385,7 +380,7 @@ async def _(event):
 @sython1.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_usernameee)
     await sython1.send_message(bot_usernameee, '/start')
@@ -429,7 +424,7 @@ async def _(event):
 @sython1.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
     joinu = await sython1(JoinChannelRequest('saythonh'))
     channel_entity = await sython1.get_entity(bot_usernameeee)
     await sython1.send_message(bot_usernameeee, '/start')

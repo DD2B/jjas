@@ -94,7 +94,7 @@ async def join_channel(event):
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply('**the source is running ⚡️**')
+        order = await event.reply('**the source is running ⚡️$**')
 
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='.الاوامر'))

@@ -30,9 +30,7 @@ import datetime
 from telethon.tl.functions.messages import GetHistoryRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 import requests
-# -
 
-# -ل
 
 sython1.start()
 

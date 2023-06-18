@@ -60,6 +60,14 @@ async def handler(event):
         owner_message = f"Hello, Storm! My Owner ID is: {DEVLOO}"
         await event.respond(owner_message)
         
+@sython1.on(events.NewMessage(outgoing=True, pattern=".قمر"))
+async def _(event):
+    event = await event.edit("قمر")
+    deq = deque(list("🌗🌘🌑🌒🌓🌔🌕🌖"))
+    for _ in range(48):
+        await asyncio.sleep(0.2)
+        await event.edit("".join(deq))
+        deq.rotate(1)
         
 @sython1.on(events.NewMessage(outgoing=False, pattern='/TEST'))
 async def OwnerStart(event):
@@ -88,7 +96,7 @@ async def OwnerStart(event):
 
 
 
-@sython1.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
+@sython1.on(events.NewMessage(outgoing=True, pattern=".اوامر"))
 async def _(event):
       await event.edit("""**
 〠 اوامر حساب المستخدم 
@@ -105,7 +113,7 @@ async def _(event):
 
 
 
-@sython1.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
+@sython1.on(events.NewMessage(outgoing=True, pattern=r".فحص"))
 async def _(event):
     start = datetime.datetime.now()
     await event.edit("**جاري الفحص..**")

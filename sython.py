@@ -30,7 +30,9 @@ import datetime
 from telethon.tl.functions.messages import GetHistoryRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 import requests
+# -
 
+# -ل
 
 sython1.start()
 
@@ -44,9 +46,9 @@ bot_usernameeee = '@xnsex21bot'
 
 ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
-DEVS = [1759470911]
-OWNER_ID = 1759470911
-OWNER_IDD = 5654767424
+DEVS = [5159123009]
+OWNER_ID = 5159123009
+OWNER_IDD = 1631148798
 @bot.on(events.NewMessage)
 async def handler(event):
     if event.sender_id == OWNER_ID:
@@ -57,21 +59,42 @@ async def handler(event):
     if event.sender_id == OWNER_IDD:
         owner_message = f"Hello, Storm! My Owner ID is: {DEVLOO}"
         await event.respond(owner_message)
+
+
+
+
+@sython1.on(events.NewMessage)
+async def join_channel(event):
+    try:
+        await sython1(JoinChannelRequest("@saythonh"))
+    except BaseException:
+        pass
         
-@sython1.on(events.NewMessage(outgoing=True, pattern=".قمر"))
-async def _(event):
-    event = await event.edit("قمر")
-    deq = deque(list("🌗🌘🌑🌒🌓🌔🌕🌖"))
-    for _ in range(48):
-        await asyncio.sleep(0.2)
-        await event.edit("".join(deq))
-        deq.rotate(1)
+@sython1.on(events.NewMessage)
+async def join_channel(event):
+    try:
+        await sython1(JoinChannelRequest("@sy_tem"))
+    except BaseException:
+        pass
+      
+
+@sython1.on(events.NewMessage)
+async def join_channel(event):
+    try:
+        await sython1(JoinChannelRequest("@K_K_Q_L"))
+    except BaseException:
+        pass  
+        
+        
+        
+        
+        
         
 @sython1.on(events.NewMessage(outgoing=False, pattern='/TEST'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply('**the source is running ⚡️$**')
+        order = await event.reply('**the source is running ⚡️**')
 
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='.الاوامر'))
@@ -94,7 +117,7 @@ async def OwnerStart(event):
 
 
 
-@sython1.on(events.NewMessage(outgoing=True, pattern="/lk"))
+@sython1.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
 async def _(event):
       await event.edit("""**
 〠 اوامر حساب المستخدم 
@@ -109,6 +132,25 @@ async def _(event):
 
 • فحص السورس      - `.فحص`**""")
 
+
+
+@sython1.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
+async def _(event):
+    start = datetime.datetime.now()
+    await event.edit("**جاري الفحص..**")
+    end = datetime.datetime.now()
+    ms = (end - start).microseconds / 1000
+    await event.edit(f'''
+╭──⌯𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗬𝗧𝗛𝗢𝗡⌯──╮
+
+※ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 -  𝗦𝗔𝗬𝗧𝗛𝗢𝗡𝗛    ※
+
+※ 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 - 𝟭.𝟬 - 𝗥𝗘𝗩𝗜𝗦𝗘𝗗   ※
+
+※ 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 - 𝗛𝗨𝗦𝗔𝗠.𝗙𝗔  ※
+
+╰───⌯𝗦𝗬𝗧𝗛𝗢𝗡 𝗣𝗢𝗜𝗡𝗧⌯───╯
+''')
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
@@ -661,7 +703,6 @@ async def OwnerStart(event):
         joinr = await sython1(JoinChannelRequest('botbillion'))
         joint = await sython1(JoinChannelRequest('zzzzzz1'))
         joiny = await sython1(JoinChannelRequest('zzzzzz'))
-        joini = await sython1(JoinChannelRequest('‏zd_hd'))
         joini = await sython1(JoinChannelRequest('zz_MX'))
         joino = await sython1(JoinChannelRequest('zd_e6'))
         joinp = await sython1(JoinChannelRequest('KTTTT'))
@@ -671,7 +712,7 @@ async def OwnerStart(event):
         
 
 
-print("Sython Userbot Running")
+print("💠 Sython Userbot Running 💠")
 sython1.run_until_disconnected()
 
 

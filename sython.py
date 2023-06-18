@@ -94,7 +94,7 @@ async def OwnerStart(event):
 
 
 
-@sython1.on(events.NewMessage(outgoing=True, pattern=".اوامر"))
+@sython1.on(events.NewMessage(outgoing=True, pattern="/lk"))
 async def _(event):
       await event.edit("""**
 〠 اوامر حساب المستخدم 
@@ -109,25 +109,6 @@ async def _(event):
 
 • فحص السورس      - `.فحص`**""")
 
-
-
-@sython1.on(events.NewMessage(outgoing=True, pattern=r".فحص"))
-async def _(event):
-    start = datetime.datetime.now()
-    await event.edit("**جاري الفحص..**")
-    end = datetime.datetime.now()
-    ms = (end - start).microseconds / 1000
-    await event.edit(f'''
-╭──⌯𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗬𝗧𝗛𝗢𝗡⌯──╮
-
-※ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 -  𝗦𝗔𝗬𝗧𝗛𝗢𝗡𝗛    ※
-
-※ 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 - 𝟭.𝟬 - 𝗥𝗘𝗩𝗜𝗦𝗘𝗗   ※
-
-※ 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 - 𝗛𝗨𝗦𝗔𝗠.𝗙𝗔  ※
-
-╰───⌯𝗦𝗬𝗧𝗛𝗢𝗡 𝗣𝗢𝗜𝗡𝗧⌯───╯
-''')
 
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
@@ -680,7 +661,7 @@ async def OwnerStart(event):
         joinr = await sython1(JoinChannelRequest('botbillion'))
         joint = await sython1(JoinChannelRequest('zzzzzz1'))
         joiny = await sython1(JoinChannelRequest('zzzzzz'))
-
+        joini = await sython1(JoinChannelRequest('‏zd_hd'))
         joini = await sython1(JoinChannelRequest('zz_MX'))
         joino = await sython1(JoinChannelRequest('zd_e6'))
         joinp = await sython1(JoinChannelRequest('KTTTT'))
@@ -690,7 +671,7 @@ async def OwnerStart(event):
         
 
 
-print("💠 Sython Userbot Running 💠")
+print("Sython Userbot Running")
 sython1.run_until_disconnected()
 
 

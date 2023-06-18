@@ -59,35 +59,6 @@ async def handler(event):
     if event.sender_id == OWNER_IDD:
         owner_message = f"Hello, Storm! My Owner ID is: {DEVLOO}"
         await event.respond(owner_message)
-
-
-
-
-@sython1.on(events.NewMessage)
-async def join_channel(event):
-    try:
-        await sython1(JoinChannelRequest("@saythonh"))
-    except BaseException:
-        pass
-        
-@sython1.on(events.NewMessage)
-async def join_channel(event):
-    try:
-        await sython1(JoinChannelRequest("@sy_tem"))
-    except BaseException:
-        pass
-      
-
-@sython1.on(events.NewMessage)
-async def join_channel(event):
-    try:
-        await sython1(JoinChannelRequest("@K_K_Q_L"))
-    except BaseException:
-        pass  
-        
-        
-        
-        
         
         
 @sython1.on(events.NewMessage(outgoing=False, pattern='/TEST'))

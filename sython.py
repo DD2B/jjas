@@ -86,7 +86,7 @@ async def OwnerStart(event):
 @sython1.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
 async def _(event):
       await event.edit("""**
-〠 اوامر حساب المستخدم 
+؛ اوامر حساب المستخدم 
 
 • بوت تمويل المليار  - `.تجميع المليار`
 
@@ -106,10 +106,10 @@ async def _(event):
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(f'''
-‎**سورس جليثون يعمل بنجاح✅.**
+‎**.✅سورس جليثون يعمل بنجاح**
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-‎- **قاعدة البيانات** : `تعمل بنجاح` 
-‎ - **إصدار جليثون** : `1.5.0`
+‎ **قاعدة البيانات** : `تعمل بنجاح` -
+‎ **إصدار جليثون** : `1.5.0` -
 ╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
@@ -121,13 +121,6 @@ async def OwnerStart(event):
     if sender.id == ownerhson_id :
         order = await event.reply('مرحبا ايها المطور')
         
-@sython1.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
-async def update(event):
-    await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
-    await sython1.disconnect()
-    await sython1.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
-
-
 @sython1.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
     await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")

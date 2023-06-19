@@ -93,19 +93,6 @@ async def _(event):
 .
 """)
 
-@bot.message_handler(commands=['start'])
-def start(message):
-    markup = types.InlineKeyboardMarkup()
-    button1 = types.InlineKeyboardButton("Button 1", callback_data="1")
-    button2 = types.InlineKeyboardButton("Button 2", callback_data="2")
-    button3 = types.InlineKeyboardButton("Button 3", callback_data="3")
-    markup.add(button1, button2, button3)
-    bot.send_message(message.chat.id, "Please choose:", reply_markup=markup)
-
-@bot.callback_query_handler(func=lambda call: True)
-def query_handler(call):
-    bot.answer_callback_query(callback_query_id=call.id, text='Selected option: {}'.format(call.data))
-
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اشتراكاتي"))
 async def _(event):
     if event.fwd_from:

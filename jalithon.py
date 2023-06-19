@@ -4,6 +4,7 @@ from time import sleep
 from telethon import events
 from config import *
 import os
+import sys
 import logging
 import asyncio
 import time
@@ -90,6 +91,23 @@ async def _(event):
 .
 """)
     
+@jalithon.on_message(
+    filters.user(SUDO_USERS) & filters.command(["اعادة تشغيل"], prefixes=f"{HNDLR}")
+)
+async def restart(client, m: Message):
+    await m.delete()
+    jmthon = await m.reply("1")
+    await jmthon.edit("2")
+    await jmthon.edit("3")
+    await jmthon.edit("4")
+    await jmthon.edit("5")
+    await jmthon.edit("6")
+    await jmthon.edit("7")
+    await jmthon.edit("8")
+    await jmthon.edit("9")
+    await jmthon.edit("**تم اعادة تشغيل سورس جليثون ميوزك بنجاح ✓**")
+    os.execl(sys.executable, sys.executable, *sys.argv)
+    quit()    
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اشتراكاتي"))
 async def _(event):
     if event.fwd_from:

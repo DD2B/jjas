@@ -111,7 +111,16 @@ async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
         order = await event.reply('مرحبا ايها المطور')
-        
+@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\تحديث"))
+
+async def update(event):
+
+    await event.edit("- جارِ تحديث السورس ...\n- انتضر من 1-2 دقيقة")
+
+    await jalithon.disconnect()
+
+    await jalithon.send_message(event.chat_id, "- تم تحديث السـورس .. بنجـاح")
+    
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
     await event.reply("**- جاري تجميع النقاط : سيدي .**")

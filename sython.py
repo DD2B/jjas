@@ -49,7 +49,7 @@ DEVS = [1759470911]
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply('**the source is running ⚡️**')
+        order = await event.reply('**The Source Ls Running** : `CD`⚡️')
 
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='.الاوامر'))
@@ -68,18 +68,15 @@ async def OwnerStart(event):
 • INFO ACCOUNT - `/infoacc`
 • JOIN BOT CHANNEL - `/join`**""")
 
-
-
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
 async def _(event):
       await event.edit("""**• اوامر الحساب المستخدم التجميع .**
 
-- بـوت تمويل المليار : `.تجميع المليار`  ،
-- بـوت تمويل العقاب : `.تجميع العقاب`  ،
-- بـوت تمويل العرب : `.تجميع العرب`  ،
-- بـوت تمويل الجوكر : `.تجميع الجوكر` ،
-• فحـص السورس : `.فحص`   ،""")
-
+- بـوت تمويل المليار : `.تجميع المليار`
+- بـوت تمويل العقاب : `.تجميع العقاب`
+- بـوت تمويل العرب : `.تجميع العرب`
+- بـوت تمويل الجوكر : `.تجميع الجوكر`
+• فحـص السورس : `.فحص`""")
 
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
 async def _(event):
@@ -105,8 +102,8 @@ async def OwnerStart(event):
         
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
-    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.reply("**- جاري تجميع النقاط : سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_username)
     await jalithon.send_message(bot_username, '/start')
@@ -148,8 +145,8 @@ async def _(event):
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/point2'))
 async def _(event):
-    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.reply("**- جاري تجميع النقاط : سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernamee)
     await jalithon.send_message(bot_usernamee, '/start')
@@ -192,8 +189,8 @@ async def _(event):
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/point3'))
 async def _(event):
-    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.reply("**- جاري تجميع النقاط : سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernameee)
     await jalithon.send_message(bot_usernameee, '/start')
@@ -236,8 +233,8 @@ async def _(event):
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/point4'))
 async def _(event):
-    await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.reply("**- جاري تجميع النقاط : سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernameeee)
     await jalithon.send_message(bot_usernameeee, '/start')
@@ -280,7 +277,7 @@ async def _(event):
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تجميع المليار"))
 async def _(event):
 
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_username)
     await jalithon.send_message(bot_username, '/start')
@@ -325,7 +322,7 @@ async def _(event):
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تجميع الجوكر"))
 async def _(event):
 
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernamee)
     await jalithon.send_message(bot_usernamee, '/start')
@@ -368,7 +365,7 @@ async def _(event):
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
 async def _(event):
 
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernameee)
     await jalithon.send_message(bot_usernameee, '/start')
@@ -412,7 +409,7 @@ async def _(event):
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
 async def _(event):
 
-    await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
+    await event.edit("**- جاري تجميع النقاط : سيدي .**")
     joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernameeee)
     await jalithon.send_message(bot_usernameeee, '/start')

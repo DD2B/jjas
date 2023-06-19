@@ -91,9 +91,7 @@ async def _(event):
 .
 """)
     
-@jalithon.on_message(
-    filters.user(SUDO_USERS) & filters.command(["اعادة تشغيل"], prefixes=f"hi")
-)
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".اعادة تشغيل"))
 async def restart(client, m: Message):
     await m.delete()
     jalithon = await m.reply("1")

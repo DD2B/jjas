@@ -577,7 +577,7 @@ async def OwnerStart(event):
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
-        dialogs = await sython1.get_dialogs()
+        dialogs = await jalithon.get_dialogs()
         for dialog in dialogs:
             if dialog.is_channel:
                 await jalithon(LeaveChannelRequest(dialog.entity))

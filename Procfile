@@ -1,1 +1,1 @@
-worker: bash sython.py
+worker: bash jalithon.py

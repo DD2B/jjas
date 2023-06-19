@@ -91,20 +91,6 @@ async def _(event):
 .
 """)
     
-@jalithon.on(events.NewMessage(outgoing=True, pattern=".اعادة تشغيل"))
-async def restart(client, m: Message):
-    await m.delete()
-    jalithon = await m.reply("1")
-    await jalithon.edit("2")
-    await jalithon.edit("3")
-    await jalithon.edit("4")
-    await jalithon.edit("5")
-    await jalithon.edit("6")
-    await jalithon.edit("7")
-    await jalithon.edit("8")
-    await jalithon.edit("9")
-    await jalithon.edit("**تم اعادة تشغيل سورس جليثون ميوزك بنجاح ✓**")
-    os.execl(sys.executable, sys.executable, *sys.argv)
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اشتراكاتي"))
 async def _(event):
     if event.fwd_from:

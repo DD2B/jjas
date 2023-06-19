@@ -90,20 +90,6 @@ async def _(event):
 .
 """)
     
-@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.ت"))
-async def _(event):
-    start = datetime.datetime.now()
-    await event.edit("جارٍ...")
-    end = datetime.datetime.now()
-    ms = (end - start).microseconds / 1000
-    await event.edit(f'''
-**☆ تـوب سـورس
-☆ الاصدار : 1.2
-☆ البنك : `{ms}`
-☆ التاريخ : `{m9zpi}`
-☆ الايدي : `{event.sender_id}`
-☆ تـوب سـورس : @Repthon**
-''')   
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اشتراكاتي"))
 async def _(event):
     if event.fwd_from:
@@ -140,12 +126,6 @@ async def _(event):
 القنوات :\t{}
 البوتات :\t{}
 `""".format(ms, u, g, c, bc, b))
-    
-@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
-async def update(event):
-    await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
-    await jalithon.disconnect()
-    await jalithon.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
     
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
 async def _(event):

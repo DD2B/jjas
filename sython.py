@@ -66,7 +66,7 @@ async def OwnerStart(event):
 • LEAVE CHANNEL & GROUP - `/lpoint`
 • TRANSFER POINT - `/transfer`
 • INFO ACCOUNT - `/infoacc`
-• JOIN BOT CHANNEL - `/join`**""")
+• الانضمام الى قنوات والاشتراك الاجباري الخاصة بوتات التمويل - `/join`**""")
 
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
 async def _(event):

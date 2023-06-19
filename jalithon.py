@@ -8,7 +8,6 @@ import sys
 import logging
 import asyncio
 import time
-import telebot
 from telebot import types
 from telethon.tl import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get

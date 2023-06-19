@@ -1,6 +1,13 @@
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 import os
+
+print(
+    """Please go-to my.telegram.org
+Login using your Telegram account
+Click on API Development Tools
+Create a new application, by entering the required details"""
+)
 APP_ID = os.environ.get("APP_ID")
 APP_HASH = os.environ.get("APP_HASH")
 BOT_USERNAME = ("‏hha2hbot")

@@ -17,7 +17,7 @@ LOGS = logging.getLogger(__name__)
 plugin_category = "tools"
 
 
-@jmthon.ar_cmd(
+@jalithon.ar_cmd(
     pattern="اعادة تشغيل$",
     command=("اعادة تشغيل", plugin_category),
     info={
@@ -57,7 +57,7 @@ async def _(event):
         LOGS.error(e)
 
 
-@jmthon.ar_cmd(
+@jalithon.ar_cmd(
     pattern="اطفاء$",
     command=("اطفاء", plugin_category),
     info={
@@ -83,7 +83,7 @@ async def _(event):
         sys.exit(0)
 
 
-@jmthon.ar_cmd(
+@jalithon.ar_cmd(
     pattern="التحديثات (تشغيل|ايقاف)$",
     command=("التحديثات", plugin_category),
     info={

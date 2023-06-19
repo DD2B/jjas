@@ -85,13 +85,13 @@ async def OwnerStart(event):
 
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
 async def _(event):
-      await event.edit(""" • **اوامر الحساب المستخدم التجميع** .
+      await event.edit(""" • ** اوامر الحساب المستخدم التجميع**  .
 
 - بـوت تمويل المليار : `.تجميع المليار` ،
 - بـوت تمويل العقاب : `.تجميع العقاب` ،
 - بـوت تمويل العرب : `.تجميع العرب` ،
-- بـوت تمويل الجوكر : `.تجميع الجوكر`  ،
-• فحص السورس : `.فحص` ،""")
+- بـوت تمويل الجوكر : `.تجميع الجوكر` ،
+• فحـص السورس : `.فحص`  ،""")
 
 
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))

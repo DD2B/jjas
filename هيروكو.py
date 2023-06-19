@@ -24,7 +24,7 @@ HEROKU_APP_NAME = Config.HEROKU_APP_NAME
 HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 
-@jmthon.ar_cmd(
+@jalithon.ar_cmd(
     pattern="(اضف|معلومات|حذف) فار ([\s\S]*)",
     command=("فار", plugin_category),
     info={
@@ -100,7 +100,7 @@ async def variable(var):
         del heroku_var[variable]
 
 
-@jmthon.ar_cmd(
+@jalithon.ar_cmd(
     pattern="استخدامي$",
     command=("استخدامي", plugin_category),
     info={
@@ -170,7 +170,7 @@ async def dyno_usage(dyno):
     )
 
 
-@jmthon.ar_cmd(
+@jalithon.ar_cmd(
     pattern="(herokulogs|الدخول)$",
     command=("الدخول", plugin_category),
     info={

@@ -62,11 +62,13 @@ async def OwnerStart(event):
 • @A_MAN9300BOT - `/point2`
 • @MARKTEBOT - `/point3`
 • @XNSEX21BOT - `/point4`
-• SEND - `/TEST`
-• LEAVE CHANNEL & GROUP - `/lpoint`
-• TRANSFER POINT - `/transfer`
-• INFO ACCOUNT - `/infoacc`
-• الانضمام الى قنوات والاشتراك الاجباري الخاصة بوتات التمويل - `/join`**""")
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+› فحص . `/TEST`
+› مغادرك القنوات ، والمجموعات . `/lpoint`
+› لتحويل النقاط من الحسابات الى حساب المسؤول بالخاص . `/transfer`
+› لمعرفة عدد النقاط . `/infoacc`
+› الانضمام الى قنوات والاشتراك الاجباري الخاصة بوتات التمويل . `/join`
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌**""")
 
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".الاوامر"))
 async def _(event):

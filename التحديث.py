@@ -182,7 +182,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         pass
 
 
-@jmthon.on(admin_cmd(pattern="تحديث(| الان)?$"))
+@jalithon.on(admin_cmd(pattern="تحديث(| الان)?$"))
 async def upstream(event):
     "To check if the bot is up to date and update if specified"
     conf = event.pattern_match.group(1).strip()

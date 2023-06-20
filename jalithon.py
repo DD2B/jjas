@@ -668,8 +668,8 @@ async def OwnerStart(event):
         msg = await jalithon.get_messages(userbott, limit=1)
         await msg[0].forward_to(ownerhson_id)
 
-‏@jalithon.on(events.NewMessage(outgoing=True, pattern=".الانضمام"))
-async def _(event):
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.ا'))
+async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
         send = await jalithon.send_message(event.chat_id, "**جاري الانضمام التلقائي للقنوات**")

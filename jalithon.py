@@ -560,7 +560,7 @@ async def _(event):
             await event.edit(f"**القناة رقم {chs}**")
     await jalithon.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/point (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='^.بوت (.*)'))
 async def OwnerStart(event):
     pot = event.pattern_match.group(1) 
     sender = await event.get_sender()

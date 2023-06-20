@@ -58,10 +58,8 @@ async def OwnerStart(event):
         order = await event.reply("""**
 Hello my friend .
 
-
-1 - لـفحص عمل السورس عند حساب معين 
-
-‹ `/TEST`
+› فحص سورس : ارسل `/TEST` 
+.`
 
 
 › امر تجميع نقاط بوت تمويل : `.تجميع المليار` 
@@ -80,13 +78,11 @@ Hello my friend .
 › الاشتراك الاجباري بوتات تمويل : `.الاشتراك الاجباري` 
 .
 
-5 - لـلدخول الى قائمة معلومات الحساب
+› للدخول آلى قائمة معلومات الحساب : `.معلومات` 
+.
 
-• `/infoacc`
-
-6 - لـلدخول الى قائمة تحويل النقاط 
-
-•`/transfer`
+› للدخول آلى قائمة تحويل النقاط : `.تحويل النقاط` 
+.`
 
 7 - لـمغادرة الحساب جميع القنوات والمجموعات
 
@@ -756,7 +752,7 @@ async def OwnerStart(event):
     
     
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/transfer'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.تحويل النقاط'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -769,7 +765,7 @@ async def OwnerStart(event):
 
 
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/infoacc'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.معلومات'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :

@@ -76,7 +76,7 @@ async def OwnerStart(event):
 
 4 - لـجعل الحساب ينضم لقنوات بوتات التمويل
 
-•`/join`
+•`.الاشتراك الاجباري`
 
 5 - لـلدخول الى قائمة معلومات الحساب
 
@@ -88,7 +88,7 @@ async def OwnerStart(event):
 
 7 - لـمغادرة الحساب جميع القنوات والمجموعات
 
-•`.الاشتراك الاجباري`
+•`.مغادرة الكل`
 
 8 - لـلدخول الى قائمة اخرى تحتوي اوامر اخرى
 
@@ -201,7 +201,7 @@ async def _(event):
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/point1'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع المليار'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -247,7 +247,7 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/point2'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع الجوكر'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -293,7 +293,7 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/point3'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع العقاب'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -339,7 +339,7 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/point4'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع العرب'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -735,7 +735,7 @@ async def OwnerStart(event):
     await msg[0].forward_to(ownerhson_id)
     
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'.مغادرة الكل'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:

@@ -59,7 +59,7 @@ async def OwnerStart(event):
 Hello my friend .
 
 › فحص سورس : ارسل `/TEST` 
-.`
+.
 
 
 › امر تجميع نقاط بوت تمويل : `.تجميع المليار` 

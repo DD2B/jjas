@@ -35,7 +35,6 @@ import requests
 jalithon.start()
 
 
-
 c = requests.session()
 bot_username = '@zmmbot'
 bot_usernamee = '@A_MAN9300BOT'
@@ -51,7 +50,6 @@ async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
         order = await event.reply('**The Source Ls Running** : `CD`⚡️')
-
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='.الاوامر'))
 async def OwnerStart(event):
@@ -235,7 +233,6 @@ async def _(event):
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
     await jalithon.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
-
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/point3'))
 async def _(event):
@@ -512,7 +509,6 @@ async def OwnerStart(event):
     await jalithon.send_message(bot_username, pt)
     sleep(4)
     msg = await jalithon.get_messages(bot_username, limit=1)
-
     await msg[0].forward_to(ownerhson_id)
     
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt2 (.*)'))
@@ -528,7 +524,6 @@ async def OwnerStart(event):
     await jalithon.send_message(bot_usernamee, pt)
     sleep(4)
     msg = await jalithon.get_messages(bot_usernamee, limit=1)
-
     await msg[0].forward_to(ownerhson_id)
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt3 (.*)'))
@@ -544,7 +539,6 @@ async def OwnerStart(event):
     await jalithon.send_message(bot_usernameee, pt)
     sleep(4)
     msg = await jalithon.get_messages(bot_usernameee, limit=1)
-
     await msg[0].forward_to(ownerhson_id)
     
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt4 (.*)'))
@@ -560,7 +554,6 @@ async def OwnerStart(event):
     await jalithon.send_message(bot_usernameeee, pt)
     sleep(4)
     msg = await sython1.get_messages(bot_usernameeee, limit=1)
-
     await msg[0].forward_to(ownerhson_id)
     
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'/npoint1'))
@@ -573,7 +566,6 @@ async def OwnerStart(event):
     await msg1[0].click(5)
     sleep(2)
     msg = await jalithon.get_messages(bot_username, limit=1)
-
     await msg[0].forward_to(ownerhson_id)
     
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'/npoint2'))
@@ -586,7 +578,6 @@ async def OwnerStart(event):
     await msg1[0].click(5)
     sleep(2)
     msg = await jalithon.get_messages(bot_usernamee, limit=1)
-
     await msg[0].forward_to(ownerhson_id)
  
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'/npoint3'))
@@ -615,7 +606,6 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -626,10 +616,6 @@ async def OwnerStart(event):
                 await jalithon(LeaveChannelRequest(dialog.entity))
                 await event.respond(f"**قمت بمغادرة جميع القنوات والمجموعات**")
                 
-
-
-
-
 @jalithon.on(events.NewMessage(pattern=r'^/send (.*) (.*)'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -638,8 +624,6 @@ async def OwnerStart(event):
     mase = event.pattern_match.group(2)
     await jalithon.send_message(usern, mase)
     await event.respond(f"**تـم ارسال الرسالة الى المستخدم {usern}**")    
-    
-    
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/transfer'))
 async def OwnerStart(event):
@@ -683,7 +667,25 @@ async def OwnerStart(event):
     if sender.id == ownerhson_id:
         msg = await jalithon.get_messages(userbott, limit=1)
         await msg[0].forward_to(ownerhson_id)
-        
+
+‏@jalithon.on(events.NewMessage(outgoing=True, pattern=".الانضمام"))
+async def _(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id:
+        send = await jalithon.send_message(event.chat_id, "**جاري الانضمام التلقائي للقنوات**")
+        joinq = await jalithon(JoinChannelRequest('d3boot_7'))
+        joinw = await jalithon(JoinChannelRequest('Fvvvv'))
+        joine = await jalithon(JoinChannelRequest('DzDDDD'))
+        joinr = await jalithon(JoinChannelRequest('botbillion'))
+        joint = await jalithon(JoinChannelRequest('zzzzzz1'))
+        joiny = await jalithon(JoinChannelRequest('zzzzzz'))
+        joinh = await jalithon(JoinChannelRequest('zd_hd'))
+        joini = await jalithon(JoinChannelRequest('zz_MX'))
+        joino = await jalithon(JoinChannelRequest('zd_e6'))
+        joinp = await jalithon(JoinChannelRequest('KTTTT'))
+        joina = await jalithon(JoinChannelRequest('RRXFR'))
+        sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
+
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/join'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -700,8 +702,7 @@ async def OwnerStart(event):
         joino = await jalithon(JoinChannelRequest('zd_e6'))
         joinp = await jalithon(JoinChannelRequest('KTTTT'))
         joina = await jalithon(JoinChannelRequest('RRXFR'))
-        sendd = await sython1.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
-        
+        sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
         
 print("Jalithon Userbot Running ")
 jalithon.run_until_disconnected()

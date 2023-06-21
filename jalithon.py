@@ -46,7 +46,7 @@ bot_usernameeee = '@xnsex21bot'
 ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
 DEVS = [1759470911]
-
+ownerhson_id = 1759470911
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/start'))
 async def start(client, message):
     message_id = message.id

@@ -162,11 +162,11 @@ async def _(event):
 ‎**.✅سورس جليثون يعمل بنجاح**
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ‎ **قاعدة البيانات** : `تعمل بنجاح` -
-‎ **إصدار جليثون** : `1.5.0` -
+‎ **إصدار جليثون** : `1.6.0` -
 ╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
-ownerhson_id = 1759470911
+DEVS = [1759470911]
 @jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
 async def OwnerStart(event):
     while True:

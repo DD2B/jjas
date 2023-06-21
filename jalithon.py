@@ -781,7 +781,7 @@ async def OwnerStart(event):
     msg1 = await jalithon.get_messages(userbt, limit=1)
     await msg1[0].click(bt)
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/forward (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^.رسالة (.*)'))
 async def OwnerStart(event):
     userbott = event.pattern_match.group(1)
     sender = await event.get_sender()

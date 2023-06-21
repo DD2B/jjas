@@ -71,7 +71,7 @@ Hello my friend .
 › امر تجميع نقاط بوت تمويل : `.تجميع العرب` 
 .
 
-› بدء تجميع نقاط من بوت اخر : ارسل `/point يوزر البوت بدون @` 
+› بدء تجميع نقاط من بوت اخر : ارسل `/point يوزر البوت بدون (@)` 
 .
 
 › الاشتراك الاجباري بوتات تمويل : `.الاشتراك الاجباري` 
@@ -86,7 +86,7 @@ Hello my friend .
 › امر مغادرة جميع قنوات والمجموعات: `.مغادرة الكل` 
 .
 
-› امر يجعل الحساب ينضم الى قناة معينة : `.اضف` يوزر القناة بدون@
+› امر يجعل الحساب ينضم الى قناة معينة : `.اضف` يوزر القناة (@)
 .
 
 › امر طلب اخر رسالة من محادثه معينة : `.رسالة` بدون (@)
@@ -573,17 +573,6 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/bot (.*) (.*)'))
-async def OwnerStart(event):
-    bots = event.pattern_match.group(1) 
-    ids = event.pattern_match.group(2) 
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id :
-     send = await jalithon.send_message(bots,f'/start {ids}')
-     sleep(6)
-    msg = await jalithon.get_messages(bots, limit=2)
-    await msg[1].forward_to(ownerhson_id)
-
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt1 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
@@ -710,8 +699,7 @@ async def OwnerStart(event):
             if dialog.is_channel:
                 await jalithon(LeaveChannelRequest(dialog.entity))
                 await event.respond(f"**قمت بمغادرة جميع القنوات والمجموعات**")
-                
-
+            
 @jalithon.on(events.NewMessage(pattern=r'^/send (.*) (.*)'))
 async def OwnerStart(event):
     sender = await event.get_sender()

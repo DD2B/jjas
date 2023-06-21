@@ -218,7 +218,7 @@ async def OwnerStart(event):
             # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
             pass
 
-@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
+@jalithon.on(events.NewMessage(outgoing=True, pattern=r".اعادة تشغيل"))
 async def update(event):
     await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
     await jalithon.disconnect()

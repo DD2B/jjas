@@ -194,7 +194,7 @@ async def OwnerStart(event):
                                                             offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
                     msgs = list.messages[0]
                     if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                        await jalithon.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
+                        await jalithon.send_message(event.chat_id, f"تم الانتهاء من التجميع | off")
                         break
                     url = msgs.reply_markup.rows[0].buttons[0].url
                     try:

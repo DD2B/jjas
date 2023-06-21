@@ -166,17 +166,28 @@ async def _(event):
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
     
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
-async def OwnerStart(event)
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/bot (.*) (.*)'))
+async def OwnerStart(event):
+    bots = event.pattern_match.group(1) 
+    ids = event.pattern_match.group(2) 
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+     send = await jalithon.send_message(bots,f'/start {ids}')
+     sleep(6)
+    msg = await jalithon.get_messages(bots, limit=2)
+    await msg[1].forward_to(ownerhson_id)
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern='^/collect (.*)'))
+async def OwnerStart(event):
     while True:
         try:
             pot = event.pattern_match.group(1) 
             sender = await event.get_sender()
             if sender.id == ownerhson_id:
-                await event.reply("جاري تجميع النقاط")
-                await event.edit("جاري تجميع النقاط")
-                joinu = await jalithon(JoinChannelRequest('saythonh'))
-                channel_entity = await jalithon.get_entity(pot)
+                await event.reply("جاري بدء عملية التجميع اللانهائية")
+
+                joinu = await sython1(JoinChannelRequest('Jalithon'))
+                channel_entity = await sython1.get_entity(pot)
                 await jalithon.send_message(pot, '/start')
                 await asyncio.sleep(4)
                 msg0 = await jalithon.get_messages(pot, limit=1)
@@ -193,7 +204,7 @@ async def OwnerStart(event)
                                                             offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
                     msgs = list.messages[0]
                     if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                        await jalithon.send_message(event.chat_id, f"تم الانتهاء من التجميع | off")
+                        await jalithon.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
                         break
                     url = msgs.reply_markup.rows[0].buttons[0].url
                     try:
@@ -211,12 +222,12 @@ async def OwnerStart(event)
                         await msg2[0].click(text='التالي')
                         chs += 1
                         await event.edit(f"القناة رقم {chs}")
+                        await asyncio.sleep(60)
 
-                await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
+                await jalithon.send_message(event.chat_id, "حدث خطأ ولكن لاتقلق سوف اعالج المشكلة واستمر ")
         except Exception as e:
             # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
             pass
-
 @jalithon.on(events.NewMessage(outgoing=True, pattern=r".اعادة تشغيل"))
 async def update(event):
     await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")

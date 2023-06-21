@@ -43,7 +43,6 @@ bot_usernameeee = '@xnsex21bot'
 ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
 DEVS = [1759470911]
-OWNER_ID = 1759470911
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/TEST'))
 async def OwnerStart(event):
@@ -166,7 +165,7 @@ async def _(event):
 ╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
-OWNER_ID = 1759470911   
+    
 @jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
 async def OwnerStart(event)
     while True:

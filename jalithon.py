@@ -166,18 +166,7 @@ async def _(event):
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
     
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/bot (.*) (.*)'))
-async def OwnerStart(event):
-    bots = event.pattern_match.group(1) 
-    ids = event.pattern_match.group(2) 
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id :
-     send = await jalithon.send_message(bots,f'/start {ids}')
-     sleep(6)
-    msg = await jalithon.get_messages(bots, limit=2)
-    await msg[1].forward_to(ownerhson_id)
-
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/collect (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
 async def OwnerStart(event):
     while True:
         try:
@@ -187,7 +176,7 @@ async def OwnerStart(event):
                 await event.reply("جاري بدء عملية التجميع اللانهائية")
 
                 joinu = await sython1(JoinChannelRequest('Jalithon'))
-                channel_entity = await sython1.get_entity(pot)
+                channel_entity = await jalithon.get_entity(pot)
                 await jalithon.send_message(pot, '/start')
                 await asyncio.sleep(4)
                 msg0 = await jalithon.get_messages(pot, limit=1)

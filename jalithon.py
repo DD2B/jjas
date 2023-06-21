@@ -44,6 +44,7 @@ ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
 DEVS = [1759470911]
 
+
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/TEST'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -107,7 +108,7 @@ async def _(event):
 .
 """)
 
-
+ownerhson_id = 1759470911
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/start'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -161,11 +162,11 @@ async def _(event):
 ‎**.✅سورس جليثون يعمل بنجاح**
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ‎ **قاعدة البيانات** : `تعمل بنجاح` -
-‎ **إصدار جليثون** : `1.6.0` -
+‎ **إصدار جليثون** : `1.5.0` -
 ╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
-    
+
 @jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
 async def OwnerStart(event):
     while True:
@@ -173,9 +174,9 @@ async def OwnerStart(event):
             pot = event.pattern_match.group(1) 
             sender = await event.get_sender()
             if sender.id == ownerhson_id:
-                await event.reply("جاري بدء عملية التجميع اللانهائية")
-
-                joinu = await sython1(JoinChannelRequest('Jalithon'))
+                await event.reply("جاري تجميع النقاط")
+                await event.edit("جاري تجميع النقاط")
+                joinu = await jalithon(JoinChannelRequest('saythonh'))
                 channel_entity = await jalithon.get_entity(pot)
                 await jalithon.send_message(pot, '/start')
                 await asyncio.sleep(4)
@@ -211,13 +212,13 @@ async def OwnerStart(event):
                         await msg2[0].click(text='التالي')
                         chs += 1
                         await event.edit(f"القناة رقم {chs}")
-                        await asyncio.sleep(60)
 
-                await jalithon.send_message(event.chat_id, "حدث خطأ ولكن لاتقلق سوف اعالج المشكلة واستمر ")
+                await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
         except Exception as e:
             # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
             pass
-@jalithon.on(events.NewMessage(outgoing=True, pattern=r".اعادة تشغيل"))
+
+@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
 async def update(event):
     await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
     await jalithon.disconnect()

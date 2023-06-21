@@ -86,35 +86,12 @@ Hello my friend .
 › امر مغادرة جميع قنوات والمجموعات: `.مغادرة الكل` 
 .
 
-8 - لـلدخول الى قائمة اخرى تحتوي اوامر اخرى
+› امر يجعل الحساب ينضم الى قناة معينة : `.اضف` يوزر القناة بدون@
+.
 
-•`/sython`
-
+› امر طلب اخر رسالة من محادثه معينة : `.رسالة` بدون (@)
+.
 **""")
-
-
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/sython'))
-async def OwnerStart(event):
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id :
-        order = await event.reply("""**
-Hello my friend .
-
-1 - لـجعل الحساب يقوم بالدخول الى رابط الدعوه
-
-•`/bot + ايدي الحساب + يوزر البوت`
-
-2 - لـجعل الحساب ينضم الى قناة معينه 
-او الانضمام الى قنوات البوت 
-
-•`/jn + يوزر القناة` 
-
-3 - لـجلب اخر رسالة من محادثه معينه 
-
-•`forward + يوزر المحادثة`
-
-**""")
-
 
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".اوامري"))
 async def _(event):

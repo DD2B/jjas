@@ -43,8 +43,8 @@ bot_usernameeee = '@xnsex21bot'
 ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
 DEVS = [1759470911]
+OWNER_ID = 1759470911
 
-DEVS = [1759470911]
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/TEST'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -108,7 +108,7 @@ async def _(event):
 .
 """)
 
-DEVS = [1759470911]
+
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/start'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -168,7 +168,8 @@ async def _(event):
 ''')
 DEVS = [1759470911]
 @jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
-async def OwnerStart(event):
+async def OwnerStart(event)
+    if event.sender_id == OWNER_ID:
     while True:
         try:
             pot = event.pattern_match.group(1) 

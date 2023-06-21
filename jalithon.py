@@ -47,7 +47,7 @@ ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
 DEVS = [1759470911]
 
-@jalithon.on_message(filters.command("start") & filters.private)
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/l'))
 async def start(client, message):
     message_id = message.id
     chat_id = message.chat.id

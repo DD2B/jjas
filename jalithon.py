@@ -108,7 +108,7 @@ async def _(event):
 .
 """)
 
-ownerhson_id = 1759470911
+DEVS = [1759470911]
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/start'))
 async def OwnerStart(event):
     sender = await event.get_sender()

@@ -187,7 +187,7 @@ async def OwnerStart(event):
                 await msg1[0].click(0)
 
                 chs = 1
-                for i in range(160):
+                for i in range(100):
                     await asyncio.sleep(2)
 
                     list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,

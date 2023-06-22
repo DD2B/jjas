@@ -174,21 +174,21 @@ async def OwnerStart(event):
             pot = event.pattern_match.group(1) 
             sender = await event.get_sender()
             if sender.id == ownerhson_id:
-                await event.reply("جاري تجميع النقاط")
-                await event.edit("جاري تجميع النقاط")
-                joinu = await jalithon(JoinChannelRequest('saythonh'))
+                await event.reply("جاري بدء عملية التجميع اللانهائية")
+
+                joinu = await jalithon(JoinChannelRequest('jalithon'))
                 channel_entity = await jalithon.get_entity(pot)
                 await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(4)
+                await asyncio.sleep(2)
                 msg0 = await jalithon.get_messages(pot, limit=1)
                 await msg0[0].click(2)
-                await asyncio.sleep(4)
+                await asyncio.sleep(2)
                 msg1 = await jalithon.get_messages(pot, limit=1)
                 await msg1[0].click(0)
 
                 chs = 1
                 for i in range(100):
-                    await asyncio.sleep(4)
+                    await asyncio.sleep(2)
 
                     list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                             offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
@@ -212,8 +212,9 @@ async def OwnerStart(event):
                         await msg2[0].click(text='التالي')
                         chs += 1
                         await event.edit(f"القناة رقم {chs}")
+                        await asyncio.sleep(60)
 
-                await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
+                await jalithon.send_message(event.chat_id, "حدث خطأ ولكن لاتقلق سوف اعالج المشكلة واستمر ")
         except Exception as e:
             # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
             pass

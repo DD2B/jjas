@@ -179,7 +179,7 @@ async def OwnerStart(event):
                 joinu = await jalithon(JoinChannelRequest('jalithon'))
                 channel_entity = await jalithon.get_entity(pot)
                 await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(2)
+                await asyncio.sleep(4)
                 msg0 = await jalithon.get_messages(pot, limit=1)
                 await msg0[0].click(2)
                 await asyncio.sleep(2)

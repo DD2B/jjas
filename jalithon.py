@@ -162,7 +162,7 @@ async def _(event):
 ‎**.✅سورس جليثون يعمل بنجاح**
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ‎ **قاعدة البيانات** : `تعمل بنجاح` -
-‎ **إصدار جليثون** : `1.5.0` -
+‎ **إصدار جليثون** : `1.7.2` -
 ╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
@@ -880,7 +880,7 @@ async def OwnerStart(event):
         joinh = await jalithon(JoinChannelRequest('zd_hd'))
         joini = await jalithon(JoinChannelRequest('zz_MX'))
         joino = await jalithon(JoinChannelRequest('zd_e6'))
-        joinp = await jalithon(JoinChannelRequest('KTTTT'))
+        joinw = await jalithon(JoinChannelRequest('KTTTT'))‏
         joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
         

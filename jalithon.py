@@ -179,15 +179,15 @@ async def OwnerStart(event):
                 joinu = await jalithon(JoinChannelRequest('jalithon'))
                 channel_entity = await jalithon.get_entity(pot)
                 await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(2)
+                await asyncio.sleep(4)
                 msg0 = await jalithon.get_messages(pot, limit=1)
                 await msg0[0].click(2)
-                await asyncio.sleep(2)
+                await asyncio.sleep(4)
                 msg1 = await jalithon.get_messages(pot, limit=1)
                 await msg1[0].click(0)
 
                 chs = 1
-                for i in range(100):
+                for i in range(120):
                     await asyncio.sleep(2)
 
                     list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
@@ -212,7 +212,7 @@ async def OwnerStart(event):
                         await msg2[0].click(text='التالي')
                         chs += 1
                         await event.edit(f"القناة رقم {chs}")
-                        await asyncio.sleep(60)
+                        await asyncio.sleep(120)
 
                 await jalithon.send_message(event.chat_id, "حدث خطأ ولكن لاتقلق سوف اعالج المشكلة واستمر ")
         except Exception as e:

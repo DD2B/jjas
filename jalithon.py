@@ -841,5 +841,5 @@ async def OwnerStart(event):
         sendy = await jalithon.send_message(event.chat_id,f"**تم الانضمام في القناة @{usercht}**")
 
 
-print("💠 Sython Userbot Running 💠")
+print("🟢")
 jalithon.run_until_disconnected()

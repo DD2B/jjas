@@ -187,7 +187,7 @@ async def OwnerStart(event):
                 msg1 = await jalithon.get_messages(pot, limit=1)
                 await msg1[0].click(0)
 
-                chs = 0
+                chs = 1
                 for i in range(100):
                     await asyncio.sleep(2)
 
@@ -206,12 +206,12 @@ async def OwnerStart(event):
                             await jalithon(ImportChatInviteRequest(bott))
                         msg2 = await jalithon.get_messages(pot, limit=1)
                         await msg2[0].click(text='تحقق')
-                        chs += 10
+                        chs += 1
                         await event.reply(f"** عدد النقاط في هذه المحاولة {chs}**")
                     except:
                         msg2 = await jalithon.get_messages(pot, limit=1)
                         await msg2[0].click(text='التالي')
-                        chs += 0
+                        chs += 1
                         await event.reply(f"** عدد النقاط في هذه المحاولة {chs} لم تحصل على نقاط في هذة لأني وجدت مجموعة خاصة وقمت بتخطيها**")
                         
                 await jalithon.send_message(event.chat_id, f"**عذرا نفذت قنوات البوت \nلكن سوف اعاود المحاولة بعد {numw} ثانية**")

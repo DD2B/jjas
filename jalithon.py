@@ -167,7 +167,7 @@ async def _(event):
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ''')
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/bo (.*) (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='^/bo (.*)'))
 async def OwnerStart(event):
     while True:
         try:

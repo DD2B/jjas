@@ -821,6 +821,7 @@ async def OwnerStart(event):
         joinw = await jalithon(JoinChannelRequest('Fvvvv'))
         joine = await jalithon(JoinChannelRequest('DzDDDD'))
         joinr = await jalithon(JoinChannelRequest('botbillion'))
+        joinz = await jalithon(JoinChannelRequest('lI7777Il'))
         joint = await jalithon(JoinChannelRequest('zzzzzz1'))
         joiny = await jalithon(JoinChannelRequest('zzzzzz'))
         joinh = await jalithon(JoinChannelRequest('zd_hd'))

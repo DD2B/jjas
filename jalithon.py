@@ -984,7 +984,75 @@ async def OwnerStart(event):
         
         joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية مجموعاتي"))
+async def ClearGroups(event):
+    global groups
+    
+    ME = await event.client.get_me()
+    RUN = await GetDialogsFilter(event, ME)
+    
+    for group in groups:
+        try:
+            await DeleteDialog(event, group), await asyncio.sleep(1)
+        except Exception as e:
+            print (e)
+            
+    groups.clear()
+    order = await event.reply('**تم تصفية المجموعات**')
+    
         
+# DELETE CHANNELS
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية قنواتي"))
+async def ClearChannels(event):
+    global channels
+    
+    ME = await event.client.get_me()
+    RUN = await GetDialogsFilter(event, ME)
+
+    for channel in channels:
+        try:
+            await DeleteDialog(event, channel), await asyncio.sleep(1)
+        except Exception as e:
+            print (e)
+            
+    channels.clear()
+    order = await event.reply('**تم تصفية القنوات**')
+
+# DELETE DIALOGS - DELETE BOTS
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية محادثاتي"))
+async def ClearDialogsAccount(event):
+    global private_dialogs
+    
+    ME = await event.client.get_me()
+    RUN = await GetDialogsFilter(event, ME)
+
+    for private_chat in private_dialogs:
+        try:
+            await DeleteDialog(event, private_chat), await asyncio.sleep(1)
+        except Exception as e:
+            print (e)
+                
+    private_dialogs.clear()
+    order = await event.client(SendMessageRequest(peer='me', message='تم تصفية المحادثات'))
+                
+    
+
+# DELETE BOTS
+@jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية بوتاتي"))
+async def ClearDialogsBots(event):
+    global bots
+    
+    ME = await event.client.get_me()
+    RUN = await GetDialogsFilter(event, ME)
+    
+    for bot_id in bots:
+        try:
+            await DeleteDialog(event, bot_id), await asyncio.sleep(1)
+        except Exception as e:
+            print (e)
+            
+    bots.clear()
+    order = await event.reply('**تم تصفية البوتات**')       
 @jalithon.on(events.NewMessage(outgoing=False, pattern='.اضف (.*)'))
 async def OwnerStart(event):
     usercht = event.pattern_match.group(1)

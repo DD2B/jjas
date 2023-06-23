@@ -51,7 +51,7 @@ async def OwnerStart(event):
     if sender.id == ownerhson_id :
         order = await event.reply('**the source is running ⚡️**')
 
-@jalithon.ar_cmd(pattern="ا")
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.ا'))
 async def hi(event):
     await edit_or_reply(
         event,

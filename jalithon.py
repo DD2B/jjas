@@ -286,15 +286,15 @@ async def OwnerStart(event):
                 joinu = await jalithon(JoinChannelRequest('jalithon'))
                 channel_entity = await jalithon.get_entity(pot)
                 await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(2)
+                await asyncio.sleep(3)
                 msg0 = await jalithon.get_messages(pot, limit=1)
                 await msg0[0].click(2)
-                await asyncio.sleep(2)
+                await asyncio.sleep(3)
                 msg1 = await jalithon.get_messages(pot, limit=1)
                 await msg1[0].click(0)
 
                 chs = 1
-                for i in range(130):
+                for i in range(90):
                     await asyncio.sleep(2)
 
                     list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,

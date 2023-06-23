@@ -934,7 +934,7 @@ async def OwnerStart(event):
         joinh = await jalithon(JoinChannelRequest('zd_hd'))
         joini = await jalithon(JoinChannelRequest('zz_MX'))
         joino = await jalithon(JoinChannelRequest('zd_e6'))
-        joinw = await jalithon(JoinChannelRequest('KTTTT'))‏
+        
         joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
         

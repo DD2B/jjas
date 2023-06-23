@@ -470,7 +470,7 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع العرب'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bor'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:

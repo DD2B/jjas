@@ -989,11 +989,11 @@ async def ClearGroups(event):
     global groups
     
     ME = await event.client.get_me()
-    RUN = await GetDialogsFilter(event, ME)
+    RUN = await jalithon(event, ME)
     
     for group in groups:
         try:
-            await DeleteDialog(event, group), await asyncio.sleep(1)
+            await jalithon(event, group), await asyncio.sleep(1)
         except Exception as e:
             print (e)
             
@@ -1003,15 +1003,15 @@ async def ClearGroups(event):
         
 # DELETE CHANNELS
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية قنواتي"))
-async def ClearChannels(event):
+async def OwnerStart(event):
     global channels
     
     ME = await event.client.get_me()
-    RUN = await GetDialogsFilter(event, ME)
+    RUN = await jalithon(event, ME)
 
     for channel in channels:
         try:
-            await DeleteDialog(event, channel), await asyncio.sleep(1)
+            await jalithon(event, channel), await asyncio.sleep(1)
         except Exception as e:
             print (e)
             
@@ -1020,15 +1020,15 @@ async def ClearChannels(event):
 
 # DELETE DIALOGS - DELETE BOTS
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية محادثاتي"))
-async def ClearDialogsAccount(event):
+async def OwnerStart(event):
     global private_dialogs
     
     ME = await event.client.get_me()
-    RUN = await GetDialogsFilter(event, ME)
+    RUN = await jalithon(event, ME)
 
     for private_chat in private_dialogs:
         try:
-            await DeleteDialog(event, private_chat), await asyncio.sleep(1)
+            await jalithon(event, private_chat), await asyncio.sleep(1)
         except Exception as e:
             print (e)
                 
@@ -1039,15 +1039,15 @@ async def ClearDialogsAccount(event):
 
 # DELETE BOTS
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية بوتاتي"))
-async def ClearDialogsBots(event):
+async def OwnerStart(event):
     global bots
     
     ME = await event.client.get_me()
-    RUN = await GetDialogsFilter(event, ME)
+    RUN = await jalithon(event, ME)
     
     for bot_id in bots:
         try:
-            await DeleteDialog(event, bot_id), await asyncio.sleep(1)
+            await jalithon(event, bot_id), await asyncio.sleep(1)
         except Exception as e:
             print (e)
             

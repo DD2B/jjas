@@ -115,7 +115,7 @@ async def OwnerStart(event):
     if sender.id == ownerhson_id :
         order = await event.reply('hi')
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^.ضف (.*) (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='^/Bo (.*) (.*)'))
 async def OwnerStart(event):
     while True:
         try:

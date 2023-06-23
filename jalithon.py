@@ -144,7 +144,7 @@ async def OwnerStart(event):
                                                             offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
                     msgs = list.messages[0]
                     if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                        await jalithon.send_message(event.chat_id, f"**• حسنا سوف اقوم بعملية التجميع \n• عدد الثواني بين كل محاولة : {numw}\n• التجميع من بوت : @{pot}**")
+                        await jalithon.send_message(event.chat_id, f"**• حسنا سوف اقوم بعملية التجميع \n• عدد الثواني بين كل محاولة : \n• التجميع من بوت : @{pot}**")
                         break
                     url = msgs.reply_markup.rows[0].buttons[0].url
                     try:
@@ -163,7 +163,7 @@ async def OwnerStart(event):
                         chs += 0
                         await event.reply(f"** عدد النقاط في هذه المحاولة {chs} لم تحصل على نقاط في هذة لأني وجدت مجموعة خاصة وقمت بتخطيها**")
                         
-                await jalithon.send_message(event.chat_id, f"**• عذرا نفذت قنوات البوت \n• لكن سوف اعاود المحاولة بعد {numw} ثانية**")
+                await jalithon.send_message(event.chat_id, f"**• عذرا نفذت قنوات البوت \n• لكن سوف اعاود المحاولة بعد  ثانية**")
                 await asyncio.sleep(30)
         except Exception as e:
             # تسجيل الخطأ هنا إذا كنت ترغب في ذلك

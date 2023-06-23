@@ -332,7 +332,7 @@ async def update(event):
     await jalithon.disconnect()
     await jalithon.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع المليار'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bom'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -378,7 +378,7 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع الجوكر'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bok'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -424,7 +424,7 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع العقاب'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bob'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:

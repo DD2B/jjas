@@ -985,11 +985,11 @@ async def OwnerStart(event):
         joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية قنواتي"))
-async def OwnerStart(event):
+async def ClearChannels(event):
     global channels
     
     ME = await event.client.get_me()
-    RUN = await OwnerStart(event, ME)
+    RUN = await GetDialogsFilter(event, ME)
 
     for channel in channels:
         try:

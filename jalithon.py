@@ -30,8 +30,10 @@ import datetime
 from telethon.tl.functions.messages import GetHistoryRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 import requests
-import asyncio
+
+
 jalithon.start()
+
 
 
 c = requests.session()
@@ -45,6 +47,19 @@ LOGS = logging.getLogger(__name__)
 DEVS = [1759470911]
 
 
+
+
+        
+        
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.فحص'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+        order = await event.reply('**the source is running ⚡️\n[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)\n**',
+                                  link_preview=False,
+                                 )
+        
+        
 @jalithon.on(events.NewMessage(outgoing=False, pattern='/TEST'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -59,40 +74,142 @@ async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
         order = await event.reply("""**
-Hello my friend .
+\n[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)\n
+ 
 
-› فحص سورس : ارسل `/TEST` 
-.
+𝟏 - للدخول الى اوامر التجميع : .تجميع
 
-› امر تجميع نقاط بوت تمويل : `.تجميع المليار` 
-.
-› امر تجميع نقاط بوت تمويل : `.تجميع الجوكر` 
-.
-› امر تجميع نقاط بوت تمويل : `.تجميع العقاب` 
-.
-› امر تجميع نقاط بوت تمويل : `.تجميع العرب` 
-.
+𝟐 - للدخول الى اوامر التحـكم : .تحكم
 
-› بدء تجميع نقاط من بوت اخر : ارسل `/point يوزر البوت بدون (@)` 
-.
+𝟑 - للدخول الى اوامر مـمـيـزة : .مميزة
 
-› الاشتراك الاجباري بوتات تمويل : `.الاشتراك الاجباري` 
-.
+𝟒 - لـفـحص عـمـل الـســورس : .فحص
 
-› للدخول آلى قائمة معلومات الحساب : `.معلومات` 
-.
+**""",
+                                  link_preview=False,
+                                 )
+                                 
 
-› للدخول آلى قائمة تحويل النقاط : `.تحويل النقاط` 
-.
 
-› امر مغادرة جميع قنوات والمجموعات: `.مغادرة الكل` 
-.
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+        order = await event.reply("""**
+[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)
 
-› امر يجعل الحساب ينضم الى قناة معينة : `.اضف` يوزر القناة (@)
-.
+============= • [ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon) • ============
 
-› امر طلب اخر رسالة من محادثه معينة : `.رسالة` بدون (@)
-.
+`/point1` :  تجميع نقاط بوت المليار
+`/point2` : تجميع نقاط بوت الجوكر 
+`/point3` :  تجميع نقاط بوت العقاب 
+`/point4` :   تجميع نقاط بوت العرب
+
+note : تستخدم هذه الاوامر بأرسالها الى الحساب او بأرسالها الى مجموعة يوجد فيها الحساب
+
+╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
+
+`/point + bot` : تجميع نقاط بوت غير موجود في القائمة
+
+note : يوزر البوت المطلوب bot ضع مكان الـ
+
+╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
+
+`/somy + bot + second` : تجميع لانهائي 
+
+note : يوزر البوت المطلوب bot ضع مكان الـ 
+
+note : عدد الثواني second ضع مكان الـ
+
+note : ننصحك بوضع عدد الثواني 300
+
+╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
+
+`/join` : الانضمام الى قنوات البوتات المذكورة
+
+`/transfer` : الدخول لقائمة تحويل نقاط
+
+`/infoacc` : الدخول لقائمة تحويل معلومات
+
+`/lpoint` : لمغادرة جميع القنوات والمجموعات
+
+============= •[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon) • ============
+**""",
+                                  link_preview=False,
+                                 )
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.تحكم'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+        order = await event.reply("""**
+[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)
+
+============= • [ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon) • ============
+
+𝟏 - لتحويل اخر رسالة من مستخدم معين او بوت :
+
+`/forward + يوزر الحساب او البوت`
+
+╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
+
+𝟐 - لأرسال رسالة الى مستخدم معين او بوت : 
+
+`/send + الرسالة + يوزر الحساب او البوت`
+
+╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
+
+𝟑 - لجعل الحساب ينقر على زر شفاف في بوت : 
+
+`/button + رقم الزر الشفاف + يوزر البوت`
+
+note :  قم بحساب رقم الزر الشفاف من العدد 0
+
+╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
+
+𝟒 - لجعل الحساب ينضم الى قناة او مجموعة
+
+`/jn + يوزر القناة او المجموعة `
+
+============= • [ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon) • ============
+**""",
+                                  link_preview=False,
+                                 )
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern='.مميزة'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+        order = await event.reply("""**
+[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)قائمة الاوامر المميزة 
+============= • [ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon) • ============
+
+𝟏 - لتفعيل بوت عبر الدخول الى رابط الدعوه : 
+
+`/bot + ايدي الحساب + يوزر البوت`
+
+╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
+
+𝟐 - الامر التالي يحتوي على ملاحظات تحتاجها :
+
+`/notes`
+
+============= • [ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon) • ============
+**""",
+                                  link_preview=False,
+                                 )
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/notes'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+        order = await event.reply("""**
+1 - اذا كنت تريد التحكم بالحسابات في التحميع وتحويل النقاط ومعرفة معلومات كل حساب قم بأنشاء مجموعة خاصة وادخل الحسابات التي قمت بتنصيب لها السورس وارفع الحسابات الى مشرفين ثم استخدم اوامر التجميع 
+
+2 - اذا كنت تريد جعل الحسابات تقوم بتجميع النقاط بدون توقف ونسبة قليلة من الحظر استخدم الامر : somy/ 
+بأمكانك معرفة المزيد عن الامر وكيفية استخدامه في قائمة .تجميع ويستحسن عند استعمال الامر وضع عدد الثواني 300 اي يعني هذا عند حدوث خطأ في التجميع او انتهت القنوات فسوف يقوم السورس بالمحاولة في التجميع تلقائيا بعد مرور 300 اي خمس دقائق وسوف يقوم السورس بأخبارك جميع ماتم الوصول اليه من الامر ويمكنك ايقاف التجميع بأرسال .اعادة تشغيل 
+
+3 - اذا كنت تريد تجميع نقاط بوتات التمويل بطريقة اعتيادية بدون المحاولة مرة اخرى تلقائيا يمكن استخدام الاوامر التالية [point , /point1/ , .....] يمكنك مراجعة الاوامر في القائمة .تجميع في اول قسمين من القائمة
 **""")
 
 @jalithon.on(events.NewMessage(outgoing=True, pattern=".اوامري"))
@@ -110,237 +227,14 @@ async def _(event):
 .
 """)
 
-ownerhson_id = 1759470911
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/start'))
-async def OwnerStart(event):
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id :
-        order = await event.reply('hi')
-        
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/collect (.*) (.*)'))
-async def OwnerStart(event):
-    while True:
-        try:
-            pot = event.pattern_match.group(1) 
-            numw = int(event.pattern_match.group(2))
-            sender = await event.get_sender()
-            if sender.id == ownerhson_id:
-                await event.reply(f"**• حسنا سوف اقوم بعملية التجميع \n• عدد الثواني بين كل محاولة : {numw}\n• التجميع من بوت : @{pot}**")
 
-                joinu = await jalithon(JoinChannelRequest('jalithon'))
-                channel_entity = await jalithon.get_entity(pot)
-                await jalithon.send_message(pot, '**جاري بدأ عملية التجميع بواسطة جليثون**')
-                await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(2)
-                msg0 = await jalithon.get_messages(pot, limit=1)
-                await msg0[0].click(2)
-                await asyncio.sleep(2)
-                msg1 = await jalithon.get_messages(pot, limit=1)
-                await msg1[0].click(0)
-
-                chs = 0
-                for i in range(100):
-                    await asyncio.sleep(2)
-
-                    list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                            offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
-                    msgs = list.messages[0]
-                    if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                        await jalithon.send_message(event.chat_id, f"**• حسنا سوف اقوم بعملية التجميع \n• عدد الثواني بين كل محاولة : {numw}\n• التجميع من بوت : @{pot}**")
-                        break
-                    url = msgs.reply_markup.rows[0].buttons[0].url
-                    try:
-                        try:
-                            await jalithon(JoinChannelRequest(url))
-                        except:
-                            bott = url.split('/')[-1]
-                            await jalithon(ImportChatInviteRequest(bott))
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='تحقق')
-                        chs += 10
-                        await event.reply(f"** عدد النقاط في هذه المحاولة {chs}**")
-                    except:
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='التالي')
-                        chs += 0
-                        await event.reply(f"** عدد النقاط في هذه المحاولة {chs} لم تحصل على نقاط في هذة لأني وجدت مجموعة خاصة وقمت بتخطيها**")
-                        
-                await jalithon.send_message(event.chat_id, f"**• عذرا نفذت قنوات البوت \n• لكن سوف اعاود المحاولة بعد {numw} ثانية**")
-                await asyncio.sleep(numw)
-        except Exception as e:
-            # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
-            await asyncio.sleep(numw)
-            
-@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اشتراكاتي"))
-async def _(event):
-    if event.fwd_from:
-        return
-    start = datetime.datetime.now()
-    u = 0  # number of users
-    g = 0  # number of basic groups
-    c = 0  # number of super groups
-    bc = 0  # number of channels
-    b = 0  # number of bots
-    await event.edit("يتم التعداد ..")
-    async for d in jalithon.iter_dialogs(limit=None):
-        if d.is_user:
-            if d.entity.bot:
-                b += 1
-            else:
-                u += 1
-        elif d.is_channel:
-            if d.entity.broadcast:
-                bc += 1
-            else:
-                c += 1
-        elif d.is_group:
-            g += 1
-        else:
-            pass
-            # logger.info(d.stringify())
-    end = datetime.datetime.now()
-    ms = (end - start).seconds
-    await event.edit("""تم استخراجها في {} ثواني
-`الاشخاص :\t{}
-المجموعات العادية :\t{}
-المجموعات الخارقة :\t{}
-القنوات :\t{}
-البوتات :\t{}
-`""".format(ms, u, g, c, bc, b))
-
-@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
-async def _(event):
-    start = datetime.datetime.now()
-    await event.edit("waiting...")
-    end = datetime.datetime.now()
-    ms = (end - start).microseconds / 1000
-    await event.edit(f'''
-‎**.✅سورس جليثون يعمل بنجاح**
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-‎ **قاعدة البيانات** : `تعمل بنجاح` -
-‎ **إصدار جليثون** : `1.7.2` -
-╎Gr : https://t.me/+i62ZNW6PN1wwNzVi
-╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-''')
-
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/bo (.*) (.*)'))
-async def OwnerStart(event):
-    while True:
-        try:
-            pot = event.pattern_match.group(1) 
-            numw = int(event.pattern_match.group(2))
-            sender = await event.get_sender()
-            if sender.id == ownerhson_id:
-                await event.reply(f"**•حسنا سوف اقوم بعملية التجميع \n• عدد الثواني بين كل محاولة : {numw}\n• التجميع من بوت : {pot}**")
-
-                joinu = await jalithon(JoinChannelRequest('jalithon'))
-                channel_entity = await jalithon.get_entity(pot)
-                await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(2)
-                msg0 = await jalithon.get_messages(pot, limit=1)
-                await msg0[0].click(2)
-                await asyncio.sleep(2)
-                msg1 = await jalithon.get_messages(pot, limit=1)
-                await msg1[0].click(0)
-
-                chs = 1
-                for i in range(100):
-                    await asyncio.sleep(2)
-
-                    list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                            offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
-                    msgs = list.messages[0]
-                    if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                        await jalithon.send_message(event.chat_id, f"**•حسنا سوف اقوم بعملية التجميع \n• عدد الثواني بين كل محاولة : {numw}\n• التجميع من بوت : {pot}**")
-                        break
-                    url = msgs.reply_markup.rows[0].buttons[0].url
-                    try:
-                        try:
-                            await jalithon(JoinChannelRequest(url))
-                        except:
-                            bott = url.split('/')[-1]
-                            await jalithon(ImportChatInviteRequest(bott))
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='تحقق')
-                        chs += 1
-                        await event.reply(f"** عدد النقاط في هذه المحاولة {chs}**")
-                    except:
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='التالي')
-                        chs += 1
-                        await event.reply(f"** عدد النقاط في هذه المحاولة {chs} لم تحصل على نقاط في هذة لأني وجدت مجموعة خاصة وقمت بتخطيها**")
-                        
-                await jalithon.send_message(event.chat_id, f"**عذرا نفذت قنوات البوت \nلكن سوف اعاود المحاولة بعد {numw} ثانية**")
-        except Exception as e:
-            # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
-            await asyncio.sleep(numw)
-
-
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/bot (.*)'))
-async def OwnerStart(event):
-    while True:
-        try:
-            pot = event.pattern_match.group(1) 
-            sender = await event.get_sender()
-            if sender.id == ownerhson_id:
-                await event.reply("جاري بدء عملية التجميع اللانهائية")
-
-                joinu = await jalithon(JoinChannelRequest('jalithon'))
-                channel_entity = await jalithon.get_entity(pot)
-                await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(3)
-                msg0 = await jalithon.get_messages(pot, limit=1)
-                await msg0[0].click(2)
-                await asyncio.sleep(3)
-                msg1 = await jalithon.get_messages(pot, limit=1)
-                await msg1[0].click(0)
-
-                chs = 1
-                for i in range(90):
-                    await asyncio.sleep(2)
-
-                    list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                            offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
-                    msgs = list.messages[0]
-                    if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                        await jalithon.send_message(event.chat_id, f"تم الانتهاء من التجميع | off")
-                        break
-                    url = msgs.reply_markup.rows[0].buttons[0].url
-                    try:
-                        try:
-                            await jalithon(JoinChannelRequest(url))
-                        except:
-                            bott = url.split('/')[-1]
-                            await jalithon(ImportChatInviteRequest(bott))
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='تحقق')
-                        chs += 1
-                        await event.edit(f"تم الانضمام في {chs} قناة")
-                    except:
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='التالي')
-                        chs += 1
-                        await event.edit(f"القناة رقم {chs}")
-                        await asyncio.sleep(90)
-
-                await jalithon.send_message(event.chat_id, "حدث خطأ ولكن لاتقلق سوف اعالج المشكلة واستمر ")
-        except Exception as e:
-            # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
-            pass
-
-@jalithon.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
-async def update(event):
-    await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
-    await jalithon.disconnect()
-    await jalithon.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
-
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bom'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
         await event.reply("جاري تجميع النقاط")
         await event.edit("جاري تجميع النقاط")
-        joinu = await jalithon(JoinChannelRequest('Jalithon'))
+        joinu = await jalithon(JoinChannelRequest('jalithon'))
         channel_entity = await jalithon.get_entity(bot_username)
         await jalithon.send_message(bot_username, '/start')
         await asyncio.sleep(4)
@@ -380,13 +274,13 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bok'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/point2'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
         await event.reply("جاري تجميع النقاط")
         await event.edit("جاري تجميع النقاط")
-        joinu = await jalithon(JoinChannelRequest('Jalithon'))
+        joinu = await jalithon(JoinChannelRequest('jalithon'))
         channel_entity = await jalithon.get_entity(bot_usernamee)
         await jalithon.send_message(bot_usernamee, '/start')
         await asyncio.sleep(4)
@@ -426,13 +320,13 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bob'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/point3'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
         await event.reply("جاري تجميع النقاط")
         await event.edit("جاري تجميع النقاط")
-        joinu = await jalithon(JoinChannelRequest('Jalithon'))
+        joinu = await jalithon(JoinChannelRequest('jalithon'))
         channel_entity = await jalithon.get_entity(bot_usernameee)
         await jalithon.send_message(bot_usernameee, '/start')
         await asyncio.sleep(4)
@@ -472,13 +366,13 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/Bor'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/point4'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
         await event.reply("جاري تجميع النقاط")
         await event.edit("جاري تجميع النقاط")
-        joinu = await jalithon(JoinChannelRequest('Jalithon'))
+        joinu = await jalithon(JoinChannelRequest('jalithon'))
         channel_entity = await jalithon.get_entity(bot_usernameeee)
         await jalithon.send_message(bot_usernameeee, '/start')
         await asyncio.sleep(4)
@@ -522,7 +416,7 @@ async def OwnerStart(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await jalithon(JoinChannelRequest('Jalithon'))
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_username)
     await jalithon.send_message(bot_username, '/start')
     await asyncio.sleep(4)
@@ -567,7 +461,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await jalithon(JoinChannelRequest('Jalithon'))
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernamee)
     await jalithon.send_message(bot_usernamee, '/start')
     await asyncio.sleep(4)
@@ -610,7 +504,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await jalithon(JoinChannelRequest('Jalithon'))
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernameee)
     await jalithon.send_message(bot_usernameee, '/start')
     await asyncio.sleep(4)
@@ -654,7 +548,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await jalithon(JoinChannelRequest('Jalithon'))
+    joinu = await jalithon(JoinChannelRequest('jalithon'))
     channel_entity = await jalithon.get_entity(bot_usernameeee)
     await jalithon.send_message(bot_usernameeee, '/start')
     await asyncio.sleep(4)
@@ -693,6 +587,8 @@ async def _(event):
             await event.edit(f"**القناة رقم {chs}**")
     await jalithon.send_message(event.chat_id, "**تم الانتهاء من التجميع | off**")
 
+
+
 @jalithon.on(events.NewMessage(outgoing=False, pattern='^/point (.*)'))
 async def OwnerStart(event):
     pot = event.pattern_match.group(1) 
@@ -700,7 +596,7 @@ async def OwnerStart(event):
     if sender.id == ownerhson_id:
         await event.reply("جاري تجميع النقاط")
         await event.edit("جاري تجميع النقاط")
-        joinu = await jalithon(JoinChannelRequest('Jalithon'))
+        joinu = await jalithon(JoinChannelRequest('jalithon'))
         channel_entity = await jalithon.get_entity(pot)
         await jalithon.send_message(pot, '/start')
         await asyncio.sleep(4)
@@ -740,6 +636,136 @@ async def OwnerStart(event):
 
         await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")
         
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/bot (.*) (.*)'))
+async def OwnerStart(event):
+    bots = event.pattern_match.group(1) 
+    ids = event.pattern_match.group(2) 
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+     send = await jalithon.send_message(bots,f'/start {ids}')
+     sleep(6)
+    msg = await jalithon.get_messages(bots, limit=2)
+    await msg[1].forward_to(ownerhson_id)
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern='^/collect (.*)'))
+async def OwnerStart(event):
+    while True:
+        try:
+            pot = event.pattern_match.group(1) 
+            sender = await event.get_sender()
+            if sender.id == ownerhson_id:
+                await event.reply("**⛦ جاري بدء عملية التجميع اللانهائية ⛦**")
+                joinu = await jalithon(JoinChannelRequest('jalithon'))
+                channel_entity = await jalithon.get_entity(pot)
+                await jalithon.send_message(pot, '/start')
+                await asyncio.sleep(2)
+                msg0 = await jalithon.get_messages(pot, limit=1)
+                await msg0[0].click(2)
+                await asyncio.sleep(2)
+                msg1 = await jalithon.get_messages(pot, limit=1)
+                await msg1[0].click(0)
+
+                chs = 1
+                for i in range(100):
+                    await asyncio.sleep(2)
+
+                    list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                                            offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+                    msgs = list.messages[0]
+                    if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+                        await jalithon.send_message(event.chat_id, f"**⛦ حدث خطأ ، لاتقلق سوف اعاود المحاولة ⛦**")
+                        break
+                    url = msgs.reply_markup.rows[0].buttons[0].url
+                    try:
+                        try:
+                            await jalithon(JoinChannelRequest(url))
+                        except:
+                            bott = url.split('/')[-1]
+                            await jalithon(ImportChatInviteRequest(bott))
+                        msg2 = await jalithon.get_messages(pot, limit=1)
+                        await msg2[0].click(text='تحقق')
+                        chs += 1
+                        await event.edit(f"**تم الانضمام في {chs} قناة**")
+                    except:
+                        msg2 = await jalithon.get_messages(pot, limit=1)
+                        await msg2[0].click(text='التالي')
+                        chs += 1
+                        await event.edit(f"**القناة رقم {chs}**")
+                        await asyncio.sleep(60)
+
+                await jalithon.send_message(event.chat_id, "**⛦ حدث خطأ ، لاتقلق سوف اعاود المحاولة ⛦**")
+        except Exception as e:
+            # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
+            pass
+
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern='^/somy (.*) (.*)'))
+async def OwnerStart(event):
+    while True:
+        try:
+            pot = event.pattern_match.group(1) 
+            numw = int(event.pattern_match.group(2))
+            sender = await event.get_sender()
+            if sender.id == ownerhson_id:
+                await event.reply(f"**✣ حسنا سوف اقوم بعملية التجميع \n✣ عدد الثواني بين كل محاولة : {numw}\n✣ التجميع من بوت : @{pot}**")
+
+                joinu = await jalithon(JoinChannelRequest('jalithon'))
+                channel_entity = await jalithon.get_entity(pot)
+                await jalithon.send_message(pot, '**جاري بدأ عملية التجميع بواسطة سايثون**')
+                await jalithon.send_message(pot, '/start')
+                await asyncio.sleep(2)
+                msg0 = await jalithon.get_messages(pot, limit=1)
+                await msg0[0].click(2)
+                await asyncio.sleep(2)
+                msg1 = await jalithon.get_messages(pot, limit=1)
+                await msg1[0].click(0)
+
+                chs = 0
+                for i in range(100):
+                    await asyncio.sleep(2)
+
+                    list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                                            offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+                    msgs = list.messages[0]
+                    if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+                        await jalithon.send_message(event.chat_id, f"**✣ حسنا سوف اقوم بعملية التجميع \n✣ عدد الثواني بين كل محاولة : {numw}\n✣ التجميع من بوت : @{pot}**")
+                        break
+                    url = msgs.reply_markup.rows[0].buttons[0].url
+                    try:
+                        try:
+                            await jalithon(JoinChannelRequest(url))
+                        except:
+                            syth = url.split('/')[-1]
+                            await jalithon(ImportChatInviteRequest(syth))
+                        msg2 = await jalithon.get_messages(pot, limit=1)
+                        await msg2[0].click(text='تحقق')
+                        chs += 10
+                        await event.reply(f"**✣ عدد النقاط في هذه المحاولة {chs} ✣**")
+                    except:
+                        msg2 = await jalithon.get_messages(pot, limit=1)
+                        await msg2[0].click(text='التالي')
+                        chs += 0
+                        await event.reply(f"""**✣ للأسف لم تحصل على نقاط في هذه المحاولة
+✣ لأنني وجدت قناة خاصة قمت بتخطيها
+✣ البوت التي حدث فيه الخطأ: {pot}**""")
+                        
+                await jalithon.send_message(event.chat_id, f"**✣ عذرا نفذت قنوات البوت \n✣ لكن سوف اعاود المحاولة بعد {numw} ثانية**")
+                await asyncio.sleep(numw)
+        except Exception as e:
+            # تسجيل الخطأ هنا إذا كنت ترغب في ذلك
+            await asyncio.sleep(numw)
+
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/restart'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownerhson_id :
+        await event.reply("• جارِ اعادة تشغيل السورس ..\n• انتضر 1-2 دقيقة  .")
+        await jalithon.disconnect()
+        await jalithon.send_message(event.chat_id, "تم اعادة تشغيل السورس ")
+        
+
+
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/pt1 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
@@ -857,7 +883,7 @@ async def OwnerStart(event):
     await msg[0].forward_to(ownerhson_id)
     
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'.مغادرة الكل'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -866,7 +892,8 @@ async def OwnerStart(event):
             if dialog.is_channel:
                 await jalithon(LeaveChannelRequest(dialog.entity))
                 await event.respond(f"**قمت بمغادرة جميع القنوات والمجموعات**")
-            
+                
+
 @jalithon.on(events.NewMessage(pattern=r'^/send (.*) (.*)'))
 async def OwnerStart(event):
     sender = await event.get_sender()
@@ -877,8 +904,7 @@ async def OwnerStart(event):
     await event.respond(f"**تـم ارسال الرسالة الى المستخدم {usern}**")    
     
     
-
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.تحويل النقاط'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/transfer'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -891,7 +917,7 @@ async def OwnerStart(event):
 
 
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.معلومات'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/infoacc'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -912,61 +938,20 @@ async def OwnerStart(event):
      sleep(2)
     msg1 = await jalithon.get_messages(userbt, limit=1)
     await msg1[0].click(bt)
+    await jalithon.send_message(event.chat_id, f"**❈ حسناً قمت بالنقر على الزر رقم {bt}**")
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^.رسالة (.*)'))
+
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/forward (.*)'))
 async def OwnerStart(event):
     userbott = event.pattern_match.group(1)
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
-        msg = await jalithon.get_messages(userbott, limit=1)
-        await msg[0].forward_to(ownerhson_id)
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/po (.*)'))
-async def OwnerStart(event):
-    pot = event.pattern_match.group(1) 
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id:
-        await event.respond("جاري تجميع النقاط")
-        await event.edit("جاري تجميع2")
-        joinu = await jalithon(JoinChannelRequest('saythonh'))
-        channel_entity = await jalithon.get_entity(pot)
-        await jalithon.send_message(pot, '/start')
-        await asyncio.sleep(4)
-        msg0 = await jalithon.get_messages(pot, limit=1)
-        await msg0[0].click(2)
-        await asyncio.sleep(4)
-        msg1 = await jalithon.get_messages(pot, limit=1)
-        await msg1[0].click(0)
-
-        chs = 1
-        for i in range(100):
-            await asyncio.sleep(4)
-
-            list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                    offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
-            msgs = list.messages[0]
-            if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await jalithon.send_message(event.chat_id, f"تم الانتهاء من التجميع | off")
-
-                break
-            url = msgs.reply_markup.rows[0].buttons[0].url
-            try:
-                try:
-                    await jalithon(JoinChannelRequest(url))
-                except:
-                    bott = url.split('/')[-1]
-                    await jalithon(ImportChatInviteRequest(bott))
-                msg2 = await jalithon.get_messages(pot, limit=1)
-                await msg2[0].click(text='تحقق')
-                chs += 1
-                await event.edit(f"تم الانضمام في {chs} قناة")
-            except:
-                msg2 = await jalithon.get_messages(pot, limit=1)
-                await msg2[0].click(text='التالي')
-                chs += 1
-                await event.edit(f"القناة رقم {chs}")
-
-        await jalithon.send_message(event.chat_id, "تم الانتهاء من التجميع | off")        
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.الاشتراك الاجباري'))
+        sing = await jalithon.send_message(event.chat_id, f"**❈ حسناً سوف اقوم بتحويل اخر رسالة\n❈ من المستخدم {userbott}**")
+        msgs = await jalithon.get_messages(userbott, limit=1)
+        if msgs:
+            await msgs[0].forward_to(ownerhson_id)
+       
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/join'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -975,18 +960,15 @@ async def OwnerStart(event):
         joinw = await jalithon(JoinChannelRequest('Fvvvv'))
         joine = await jalithon(JoinChannelRequest('DzDDDD'))
         joinr = await jalithon(JoinChannelRequest('botbillion'))
-        joinz = await jalithon(JoinChannelRequest('lI7777Il'))
         joint = await jalithon(JoinChannelRequest('zzzzzz1'))
         joiny = await jalithon(JoinChannelRequest('zzzzzz'))
-        joinh = await jalithon(JoinChannelRequest('zd_hd'))
         joini = await jalithon(JoinChannelRequest('zz_MX'))
-        joino = await jalithon(JoinChannelRequest('zd_e6'))
-        
+        joino = await jalithon(JoinChannelRequest('lI7777Il'))
+        joinp = await jalithon(JoinChannelRequest('KTTTT'))
         joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
-
-    
-@jalithon.on(events.NewMessage(outgoing=False, pattern='.اضف (.*)'))
+        
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/jn (.*)'))
 async def OwnerStart(event):
     usercht = event.pattern_match.group(1)
     sender = await event.get_sender()
@@ -996,5 +978,6 @@ async def OwnerStart(event):
         sendy = await jalithon.send_message(event.chat_id,f"**تم الانضمام في القناة @{usercht}**")
 
 
-print("🟢")
+print("✖️")
 jalithon.run_until_disconnected()
+

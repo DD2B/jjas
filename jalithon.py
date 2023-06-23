@@ -49,7 +49,7 @@ DEVS = [1759470911]
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply('**the source is running ⚡️\n[ . ᯏ𝖩𝗆𝗍𝗁𝗈ꪀ - ᥴ𝗆𝖽 ᭡ .](t.me/jmthon)\n**',
+        order = await event.reply('**the source is running ⚡️\n[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)\n**',
                                   link_preview=False,
                                  )
 

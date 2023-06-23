@@ -120,7 +120,7 @@ async def OwnerStart(event):
     while True:
         try:
             pot = event.pattern_match.group(1) 
-            numw = int(event.pattern_match.group(2))
+          #  numw = int(event.pattern_match.group(2))
             sender = await event.get_sender()
             if sender.id == ownerhson_id:
                 await event.reply(f"**• حسنا سوف اقوم بعملية التجميع \n• عدد الثواني بين كل محاولة : {numw}\n• التجميع من بوت : @{pot}**")

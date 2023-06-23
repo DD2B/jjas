@@ -989,7 +989,7 @@ async def OwnerStart(event):
     global channels
     
     ME = await event.client.get_me()
-    RUN = await GetDialogsFilter(event, ME)
+    RUN = await OwnerStart(event, ME)
 
     for channel in channels:
         try:

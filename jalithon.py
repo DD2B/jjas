@@ -984,21 +984,7 @@ async def OwnerStart(event):
         
         joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
-@jalithon.on(events.NewMessage(outgoing=True, pattern=".تصفية قنواتي"))
-async def OwnerStart(event):
-    global channels
-    
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id:
 
-    for channel in channels:
-        try:
-            await OwnerStart(event, channel), await asyncio.sleep(1)
-        except Exception as e:
-            print (e)
-            
-    channels.clear()
-    order = await event.reply('**تم تصفية القنوات**')
     
 @jalithon.on(events.NewMessage(outgoing=False, pattern='.اضف (.*)'))
 async def OwnerStart(event):

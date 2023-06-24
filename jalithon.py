@@ -632,7 +632,7 @@ async def OwnerStart(event):
 
                 joinu = await jalithon(JoinChannelRequest('jalithon'))
                 channel_entity = await jalithon.get_entity(pot)
-                await jalithon.send_message(pot, '**جاري بدأ عملية التجميع بواسطة سايثون**')
+                await jalithon.send_message(pot, '**جاري بدأ عملية التجميع بواسطة جليثون**')
                 await jalithon.send_message(pot, '/start')
                 await asyncio.sleep(2)
                 msg0 = await jalithon.get_messages(pot, limit=1)

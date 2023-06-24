@@ -68,27 +68,48 @@ async def OwnerStart(event):
                                   link_preview=False,
                                  )
 
-
 @jalithon.on(events.NewMessage(outgoing=False, pattern='.الاوامر'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
         order = await event.reply("""**
-\n[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)\n
- 
+\n[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon)
 
-𝟏 - للدخول الى اوامر التجميع : .تجميع
+› فحص سورس : ارسل `/TEST` 
+.
 
-𝟐 - للدخول الى اوامر التحـكم : .تحكم
+› امر تجميع نقاط بوت المليار : `/Bom`
+.
+› امر تجميع نقاط بوت الجوكر : `/Bok`
+.
+› امر تجميع نقاط بوت العقاب : `/Bol` 
+.
+› امر تجميع نقاط بوت العرب : `/Bor` 
+.
 
-𝟑 - للدخول الى اوامر مـمـيـزة : .مميزة
+› بدء تجميع نقاط من بوت اخر : ارسل `/point يوزر البوت بدون (@)` 
+.
 
-𝟒 - لـفـحص عـمـل الـســورس : .فحص
+› الاشتراك الاجباري بوتات تمويل : `/ch` 
+.
 
+› للدخول آلى قائمة معلومات الحساب : `/Information` 
+.
+
+› للدخول آلى قائمة تحويل النقاط : `/Transfer` 
+.
+
+› امر مغادرة جميع قنوات والمجموعات: `/Leaving` 
+.
+
+› امر يجعل الحساب ينضم الى قناة معينة : `/Joined` يوزر القناة (@)
+.
+
+› امر طلب اخر رسالة من محادثه معينة : `/Transfer` بدون (@)
+.
 **""",
                                   link_preview=False,
                                  )
-                                 
 
 
 @jalithon.on(events.NewMessage(outgoing=False, pattern='.تجميع'))
@@ -125,13 +146,13 @@ note : ننصحك بوضع عدد الثواني 300
 
 ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 
-`/join` : الانضمام الى قنوات البوتات المذكورة
+`/ch` : الانضمام الى قنوات البوتات المذكورة
 
-`/transfer` : الدخول لقائمة تحويل نقاط
+`/Transfer` : الدخول لقائمة تحويل نقاط
 
-`/infoacc` : الدخول لقائمة تحويل معلومات
+`/Information` : الدخول لقائمة تحويل معلومات
 
-`/lpoint` : لمغادرة جميع القنوات والمجموعات
+`/Leaving` : لمغادرة جميع القنوات والمجموعات
 
 ============= •[ . ᯏ𝖩𝖺𝖨𝗂𝗍𝗁᥆ꪀ ~ ꪀꫀ᥊ ᭡ .](t.me/Jalithon) • ============
 **""",
@@ -883,7 +904,7 @@ async def OwnerStart(event):
     await msg[0].forward_to(ownerhson_id)
     
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'/Leaving'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -904,7 +925,7 @@ async def OwnerStart(event):
     await event.respond(f"**تـم ارسال الرسالة الى المستخدم {usern}**")    
     
     
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/transfer'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/Transfer'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -917,7 +938,7 @@ async def OwnerStart(event):
 
 
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/infoacc'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/Information'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -941,7 +962,7 @@ async def OwnerStart(event):
     await jalithon.send_message(event.chat_id, f"**❈ حسناً قمت بالنقر على الزر رقم {bt}**")
         
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/forward (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern=r'^/Transfer (.*)'))
 async def OwnerStart(event):
     userbott = event.pattern_match.group(1)
     sender = await event.get_sender()
@@ -951,7 +972,7 @@ async def OwnerStart(event):
         if msgs:
             await msgs[0].forward_to(ownerhson_id)
        
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/join'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/ch'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -968,7 +989,7 @@ async def OwnerStart(event):
         joina = await jalithon(JoinChannelRequest('RRXFR'))
         sendd = await jalithon.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
         
-@jalithon.on(events.NewMessage(outgoing=False, pattern='/jn (.*)'))
+@jalithon.on(events.NewMessage(outgoing=False, pattern='/Joined (.*)'))
 async def OwnerStart(event):
     usercht = event.pattern_match.group(1)
     sender = await event.get_sender()

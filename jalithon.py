@@ -608,7 +608,7 @@ async def OwnerStart(event):
                             syth = url.split('/')[-1]
                             await jalithon(ImportChatInviteRequest(syth))
                         msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='تحقق')
+                        await msg2[0].click(text='التالي')
                         chs += 10
                         await event.reply(f"**✣ عدد النقاط في هذه المحاولة {chs} ✣**")
                     except:

@@ -621,60 +621,6 @@ async def OwnerStart(event):
         except Exception as e:
             
             await asyncio.sleep(numw)
-
-@jalithon.on(events.NewMessage(outgoing=False, pattern='^/somy (.*) (.*)'))
-async def OwnerStart(event):
-    while True:
-        try:
-            pot = event.pattern_match.group(1) 
-            numw = int(event.pattern_match.group(2))
-            sender = await event.get_sender()
-            #if sender.id == ownerhson_id:
-                await event.reply(f"**✣ حسنا سوف اقوم بعملية التجميع \n✣ عدد الثواني بين كل محاولة : {numw}\n✣ التجميع من بوت : @{pot}**")
-
-                joinu = await jalithon(JoinChannelRequest('jalithon'))
-                channel_entity = await jalithon.get_entity(pot)
-                await jalithon.send_message(pot, '**جاري بدأ عملية التجميع بواسطة جليثون**')
-                await jalithon.send_message(pot, '/start')
-                await asyncio.sleep(2)
-                msg0 = await jalithon.get_messages(pot, limit=1)
-                await msg0[0].click(2)
-                await asyncio.sleep(2)
-                msg1 = await jalithon.get_messages(pot, limit=1)
-                await msg1[0].click(0)
-
-                chs = 0
-                for i in range(100):
-                    await asyncio.sleep(2)
-
-                    list = await jalithon(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                            offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
-                    msgs = list.messages[0]
-                    if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                        await jalithon.send_message(event.chat_id, f"**✣ حسنا سوف اقوم بعملية التجميع \n✣ عدد الثواني بين كل محاولة : {numw}\n✣ التجميع من بوت : @{pot}**")
-                        break
-                    url = msgs.reply_markup.rows[0].buttons[0].url
-                    try:
-                        try:
-                            await jalithon(JoinChannelRequest(url))
-                        except:
-                            syth = url.split('/')[-1]
-                            await jalithon(ImportChatInviteRequest(syth))
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='تحقق')
-                        chs += 10
-                        await event.reply(f"**✣ عدد النقاط في هذه المحاولة {chs} ✣**")
-                    except:
-                        msg2 = await jalithon.get_messages(pot, limit=1)
-                        await msg2[0].click(text='التالي')
-                        chs += 0
-                        await event.reply(f"""**✣ للأسف لم تحصل على نقاط في هذه المحاولة\n✣ لأنني وجدت قناة خاصة قمت بتخطيها\n✣ البوت التي حدث فيه الخطأ: @{pot}**""")
-                        
-                await jalithon.send_message(event.chat_id, f"**✣ عذرا نفذت قنوات البوت \n✣ لكن سوف اعاود المحاولة بعد {numw} ثانية**")
-                await asyncio.sleep(numw)
-        except Exception as e:
-            
-            await asyncio.sleep(numw)
             
 @jalithon.on(events.NewMessage(outgoing=False, pattern=r'/restart'))
 async def OwnerStart(event):

@@ -49,9 +49,6 @@ DEVS = [1759470911]
 
 
 
-@jalithon.on(events.NewMessage(outgoing=False, pattern="بوت المليار$")
-async def OwnerStart(event):
-    await event.edit('@zmmbot')
 
 # Copyright (C) 2022 Zed-Thon . All Rights Reserved
 @jalithon.on(events.NewMessage(outgoing=False, pattern="المليار ?(.*)")

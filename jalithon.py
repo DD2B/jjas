@@ -54,7 +54,7 @@ from datetime import datetime
 target_timezone = timezone('Asia/Baghdad')
 
 # Define a function to change the profile name
-def change_profile_name():
+def OwnerStart():
     all = client.get_me()
     firstNmae = all.first_name if all.first_name else ""
     lastName = all.last_name if all.last_name else ""
@@ -62,11 +62,10 @@ def change_profile_name():
     current_time = datetime.now(target_timezone).strftime("%I:%M %p")
     new_name = f"{allName} - {current_time}"
     client.update_profile(first_name=new_name)
-
-with client:
+    await client:
     # Continuously monitor the time and update the profile name
-    while True:
-        change_profile_name()
+    await True:
+        OwnerStart()
         pyrogram.idle()
 
 

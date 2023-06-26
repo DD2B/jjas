@@ -47,26 +47,6 @@ LOGS = logging.getLogger(__name__)
 DEVS = [1759470911]
 
 
-import pyrogram
-from pytz import timezone
-from datetime import datetime
-
-target_timezone = timezone('Asia/Baghdad')
-
-# Define a function to change the profile name
-def OwnerStart():
-    all = client.get_me()
-    firstNmae = all.first_name if all.first_name else ""
-    lastName = all.last_name if all.last_name else ""
-    allName = firstNmae + " " + lastName
-    current_time = datetime.now(target_timezone).strftime("%I:%M %p")
-    new_name = f"{allName} - {current_time}"
-    client.update_profile(first_name=new_name)
-    await client:
-    # Continuously monitor the time and update the profile name
-    await True:
-        OwnerStart()
-        pyrogram.idle()
 
 
     

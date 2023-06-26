@@ -63,6 +63,11 @@ def change_profile_name():
     new_name = f"{allName} - {current_time}"
     client.update_profile(first_name=new_name)
 
+with client:
+    # Continuously monitor the time and update the profile name
+    while True:
+        change_profile_name()
+        pyrogram.idle()
 
 
     
